@@ -24,7 +24,7 @@ def main():
     d = cfg["drive"]
     listing = subprocess.run(
         ["rclone", "lsjson", "--files-only", "--no-mimetype", f"{d['remote']}{d['inbox']}"],
-        check=True, capture_output=True, text=True,
+        check=True, stdout=subprocess.PIPE, text=True,
     ).stdout
     exts = {e.lower() for e in d["audio_extensions"]}
     skip = drive_ids_done() | open_pr_ids()
