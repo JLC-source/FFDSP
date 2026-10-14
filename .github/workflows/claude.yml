@@ -1,0 +1,38 @@
+name: Claude edits
+
+# Comment "@claude ..." on an episode pull request to change its title or
+# description. Only the repository owner can trigger this.
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  claude:
+    if: contains(github.event.comment.body, '@claude') && github.event.comment.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Prepare Claude token
+        id: token
+        env:
+          RAW: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          t="$(printf '%s' "$RAW" | tr -d ' \r\n\t')"
+          echo "::add-mask::$t"
+          echo "value=$t" >> "$GITHUB_OUTPUT"
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ steps.token.outputs.value }}
+          github_token: ${{ github.token }}
+          claude_args: >-
+            --allowedTools Read,Edit,Write
+            --append-system-prompt "This pull request adds one Food for the Soul podcast episode. Its text lives in the episodes/*.yml file (fields: title, description). Change only what Rabbi Raskin asks for, keep the YAML valid, and never change guid, audio, source, pub_date or processing."

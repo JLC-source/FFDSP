@@ -1,0 +1,40 @@
+name: Publish feed
+
+# Runs when an episode is approved (merged) or settings change.
+# Builds feed.xml + website from episodes/*.yml and publishes to GitHub Pages.
+on:
+  push:
+    branches: [main]
+    paths: ["episodes/**", "transcripts/**", "config.yml", "site/**", "scripts/build_feed.py", "scripts/common.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install PyYAML==6.0.3 requests
+      - name: Build feed (and check every audio link works)
+        run: python scripts/build_feed.py _site --check-urls
+      - name: Validate feed XML
+        run: python -c "import xml.etree.ElementTree as E; r=E.parse('_site/feed.xml').getroot(); print(len(r.find('channel').findall('item')), 'episodes in feed')"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,48 @@
+# Food for the Soul — pipeline settings.
+# Everything the pipeline needs to know lives here. Edit with care.
+
+show:
+  title: Food for the Soul
+  description: Chassidus explained in a simple and clear fashion.
+  author: Rabbi Hilel Raskin
+  owner_name: Rabbi Hilel Raskin
+  owner_email: hilelraskin@gmail.com   # Spotify/Apple send ownership codes here
+  language: en
+  copyright: Rabbi Hilel Raskin
+  explicit: false
+  type: episodic
+  category: Education
+  subcategory: Self-Improvement
+  cover: cover.jpg                     # file in site/, 1400–3000 px square
+  number_episodes: true                # adds itunes:episode in date order
+
+# The permanent public address of the website/feed (GitHub Pages).
+site_url: https://jlc-source.github.io/FFDSP
+
+# ---- Audio hosting -------------------------------------------------------
+# Which host the feed points to. Change this ONE line to switch hosts.
+# GUIDs never change, so switching hosts never creates duplicate episodes.
+audio_host: archive
+
+hosts:
+  archive:
+    # https://archive.org/download/<identifier>/<file>
+    item_prefix: food-for-the-soul
+    collection: opensource_audio
+  r2:
+    # Not set up yet. Fill in when moving to Cloudflare R2.
+    public_base_url: ""
+    bucket: ""
+
+# ---- Google Drive (via rclone remote "ffts", rooted at "Torah Classes") ----
+drive:
+  remote: "ffts:"
+  inbox: Inbox
+  done: Done
+  audio_extensions: [m4a, mp3, wav, aac, ogg, opus, flac, mp4, mov, webm, amr, 3gp]
+  max_per_run: 4
+
+# ---- Processing ------------------------------------------------------------
+whisper_model: small
+# Where Claude finds examples of your writing style until past episodes are imported.
+legacy_feed_url: https://anchor.fm/s/102a4d0dc/podcast/rss

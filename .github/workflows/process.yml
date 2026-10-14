@@ -1,0 +1,189 @@
+name: Process new recordings
+
+# Daily: pick up new recordings from Drive "Torah Classes/Inbox", clean them,
+# transcribe, let Claude write the title/description, upload the audio, and
+# open a pull request for approval. Nothing goes live until the PR is merged.
+on:
+  schedule:
+    - cron: "17 10 * * *"   # every day ~6:17am New York time
+  workflow_dispatch:         # "Run workflow" button for an immediate run
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: process-recordings
+  cancel-in-progress: false
+
+env:
+  RCLONE_VERSION: v1.75.2
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.list.outputs.count }}
+      matrix: ${{ steps.list.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install PyYAML==6.0.3
+      - name: Install rclone
+        run: |
+          curl -fsSLo rclone.zip "https://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-amd64.zip"
+          unzip -q rclone.zip && sudo install rclone-*/rclone /usr/local/bin/
+      - name: Connect Google Drive
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+        run: mkdir -p ~/.config/rclone && printf '%s\n' "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+      - name: Look for new recordings
+        id: list
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/discover.py
+
+  episode:
+    needs: discover
+    if: needs.discover.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
+    env:
+      WORK: ${{ github.workspace }}/work
+      FILE_ID: ${{ matrix.id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          curl -fsSLo rclone.zip "https://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-amd64.zip"
+          unzip -q rclone.zip && sudo install rclone-*/rclone /usr/local/bin/ && rm -rf rclone*
+          pip install -q -r requirements.txt
+      - name: Cache Whisper model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-small-v1
+      - name: Connect Google Drive
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+        run: mkdir -p ~/.config/rclone && printf '%s\n' "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+
+      - name: Download "${{ matrix.name }}"
+        env:
+          NAME: ${{ matrix.name }}
+          MODTIME: ${{ matrix.modtime }}
+        run: |
+          mkdir -p "$WORK/in"
+          rclone backend copyid ffts: "$FILE_ID" "$WORK/in/"
+          python -c 'import json,os; json.dump({"id":os.environ["FILE_ID"],"name":os.environ["NAME"],"modtime":os.environ["MODTIME"]}, open(os.environ["WORK"]+"/source.json","w"))'
+          ls -la "$WORK/in"
+
+      - name: Clean audio
+        run: python scripts/clean_audio.py "$(ls "$WORK"/in/* | head -1)" "$WORK/episode.mp3" "$WORK/stats.json"
+
+      - name: Transcribe
+        run: python scripts/transcribe.py "$WORK/episode.mp3" "$WORK/transcript"
+
+      - name: Gather style examples
+        run: |
+          python scripts/style_examples.py > "$WORK/style.md"
+          python -c 'import json,os; print("Original file name:", json.load(open(os.environ["WORK"]+"/source.json"))["name"])' > "$WORK/filename.txt"
+
+      - name: Prepare Claude token
+        id: token
+        env:
+          RAW: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          t="$(printf '%s' "$RAW" | tr -d ' \r\n\t')"
+          echo "::add-mask::$t"
+          echo "value=$t" >> "$GITHUB_OUTPUT"
+
+      - name: Claude writes title and description
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ steps.token.outputs.value }}
+          github_token: ${{ github.token }}
+          claude_args: --allowedTools Read,Write
+          prompt: |
+            You are helping Rabbi Hilel Raskin publish an episode of his podcast "Food for the Soul" —
+            Chassidus explained in a simple and clear fashion. Classes are in English with many
+            Hebrew and Yiddish terms.
+
+            Read these files:
+            - work/filename.txt — the original recording's file name (often names the topic or source, e.g. a maamar and year)
+            - work/transcript.txt — automatic transcript (may misspell Hebrew terms; correct them in your writing)
+            - work/style.md — recent episode titles and descriptions; match this style closely
+
+            Then write work/meta.json containing exactly this JSON object:
+            {
+              "title": "...",
+              "description": "...",
+              "notes_for_rabbi": "..."
+            }
+
+            Rules:
+            - title: short, like the existing titles (usually 3–9 words). Use common English
+              transliterations (Chassidus, Hashem, Tanya, Shir HaShirim, Rosh Hashana). If the
+              recording is clearly one part of a multi-part class, end with "part N" like the existing titles.
+            - description: 2–3 plain sentences saying what the class teaches, warm and simple,
+              followed by a final line naming the source when you can tell it (for example
+              "Maamar Mayim Rabim 5738" or "Likutei Sichot"), in the same terse way the
+              existing descriptions do. No hashtags, no emojis, no markdown.
+            - notes_for_rabbi: one short sentence about anything you were unsure of (a name, a
+              source, a term), or "" if nothing.
+            Write only that file. Do not modify anything else.
+
+      - name: Check Claude's output and choose file names
+        run: |
+          test -s "$WORK/meta.json" || { echo "Claude did not write work/meta.json"; exit 1; }
+          python scripts/make_episode.py prepare "$WORK"
+
+      - name: Upload audio to the internet archive
+        env:
+          IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
+        run: |
+          read -r FILE ITEM < <(python -c 'import json,os; p=json.load(open(os.environ["WORK"]+"/plan.json")); print(p["audio_file"], p["archive_item"])')
+          TITLE="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["title"])')"
+          DESC="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["description"])')"
+          python scripts/upload_audio.py "$WORK/$FILE" "$ITEM" "$TITLE" "$DESC" | tail -1 > "$WORK/audio_url.txt"
+          cat "$WORK/audio_url.txt"
+
+      - name: Back up edited MP3 to Drive "Done"
+        run: |
+          FILE="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["audio_file"])')"
+          rclone copyto "$WORK/$FILE" "ffts:Done/$FILE"
+
+      - name: Open pull request for approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/make_episode.py finalize "$WORK"
+          BRANCH="episode/$FILE_ID"
+          TITLE="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["title"])')"
+          git config user.name "Food for the Soul pipeline"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add episodes transcripts
+          git commit -m "New episode: $TITLE"
+          git push --force origin "$BRANCH"
+          if gh pr view "$BRANCH" --json state -q .state 2>/dev/null | grep -q OPEN; then
+            gh pr edit "$BRANCH" --title "🎧 $TITLE" --body-file "$WORK/pr_body.md"
+          else
+            gh pr create --head "$BRANCH" --base main --title "🎧 $TITLE" --body-file "$WORK/pr_body.md"
+          fi
+
+      - name: Move original recording to Drive "Done"
+        run: |
+          rclone backend moveid ffts: "$FILE_ID" "Done/"
