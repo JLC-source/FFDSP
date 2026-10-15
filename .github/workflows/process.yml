@@ -157,7 +157,7 @@ jobs:
           read -r FILE ITEM < <(python -c 'import json,os; p=json.load(open(os.environ["WORK"]+"/plan.json")); print(p["audio_file"], p["archive_item"])')
           TITLE="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["title"])')"
           DESC="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["description"])')"
-          python scripts/upload_audio.py "$WORK/$FILE" "$ITEM" "$TITLE" "$DESC" | tail -1 > "$WORK/audio_url.txt"
+          python scripts/upload_audio.py "$WORK/$FILE" "$ITEM" "$TITLE" "$DESC" "$WORK/audio_url.txt"
           cat "$WORK/audio_url.txt"
 
       - name: Back up edited MP3 to Drive "Done"
@@ -186,4 +186,4 @@ jobs:
 
       - name: Move original recording to Drive "Done"
         run: |
-          rclone backend moveid ffts: "$FILE_ID" "Done/"
+          rclone backend moveid ffts: "$FILE_ID" "ffts:Done/"

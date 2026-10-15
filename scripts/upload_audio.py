@@ -1,7 +1,7 @@
 """Upload an episode MP3 to the audio host selected in config.yml.
 
-Usage: upload_audio.py FILE.mp3 ITEM_ID "Title" "Description"
-Prints the public URL. Re-running with the same ITEM_ID overwrites (safe to retry).
+Usage: upload_audio.py FILE.mp3 ITEM_ID "Title" "Description" URL_OUT.txt
+Writes the public URL to URL_OUT.txt. Re-running with the same ITEM_ID overwrites (safe to retry).
 """
 import os
 import sys
@@ -41,14 +41,16 @@ def upload_archive(path, item, title, description, cfg):
     raise SystemExit(f"Uploaded, but {url} is not reachable yet")
 
 
-def main(path, item, title, description):
+def main(path, item, title, description, url_out):
     cfg = load_config()
     host = cfg["audio_host"]
-    if host == "archive":
-        print(upload_archive(path, item, title, description, cfg))
-    else:
+    if host != "archive":
         raise SystemExit(f"Upload to '{host}' is not set up yet")
+    url = upload_archive(path, item, title, description, cfg)
+    with open(url_out, "w") as f:
+        f.write(url + "\n")
+    print(f"Audio is live at {url}")
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:5])
+    main(*sys.argv[1:6])
