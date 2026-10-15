@@ -54,12 +54,12 @@ def main(out, check_urls=False):
     site = cfg["site_url"].rstrip("/")
     out = Path(out)
     shutil.rmtree(out, ignore_errors=True)
-    (out / "transcripts").mkdir(parents=True)
+    shutil.copytree(ROOT / "site", out)  # cover + episode artwork
+    (out / "transcripts").mkdir(exist_ok=True)
 
     cover = ROOT / "site" / show["cover"]
     w, h = jpeg_size(cover)
     assert w == h and 1400 <= w <= 3000, f"Cover art must be square 1400–3000 px, got {w}x{h}"
-    shutil.copy(cover, out / show["cover"])
 
     eps = load_episodes()
     seen = set()
@@ -78,7 +78,8 @@ def main(out, check_urls=False):
         if show.get("number_episodes") and ep.get("episode_type", "full") == "full":
             extra += f"\n      <itunes:episode>{ep.get('number', number)}</itunes:episode>"
         if ep.get("image"):
-            extra += f'\n      <itunes:image href="{escape(ep["image"])}"/>'
+            img = ep["image"] if ep["image"].startswith("http") else f"{site}/{ep['image']}"
+            extra += f'\n      <itunes:image href="{escape(img)}"/>'
         if ep.get("transcript"):
             t = Path(ep["transcript"])
             shutil.copy(ROOT / t, out / "transcripts" / t.name)

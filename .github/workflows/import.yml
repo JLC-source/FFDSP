@@ -1,0 +1,70 @@
+name: Import past episodes
+
+# One-time: copy all episodes from the old Spotify for Creators feed to the
+# Internet Archive, keeping each episode's original GUID, then open a pull
+# request for review. Safe to run again (skips what is already done).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q internetarchive==5.10.1 PyYAML==6.0.3 requests
+      - name: Continue from an earlier attempt
+        run: |
+          if git ls-remote --exit-code origin import-past-episodes >/dev/null; then
+            git fetch -q origin import-past-episodes && git checkout -q import-past-episodes
+          fi
+      - name: Copy past episodes to the Internet Archive
+        env:
+          IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
+        run: python scripts/import_legacy.py
+      - name: Save progress
+        if: always()
+        run: |
+          git config user.name "Food for the Soul pipeline"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B import-past-episodes
+          git add episodes site
+          git diff --cached --quiet || git commit -qm "Import past episodes from Spotify for Creators"
+          git push -q --force origin import-past-episodes
+      - name: Build the new feed and check every audio link
+        run: python scripts/build_feed.py _site --check-urls
+      - name: Compare with the old feed
+        run: python scripts/compare_feeds.py _site/feed.xml | tee compare.txt
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          COUNT=$(ls episodes/*.yml | wc -l)
+          {
+            echo "## 📚 Past episodes copied from Spotify for Creators"
+            echo
+            echo "All past episodes were downloaded from Spotify for Creators and uploaded unchanged to the Internet Archive."
+            echo "Each keeps its **original ID (GUID)**, title, description, date and artwork, so Spotify and Apple will treat them as the same episodes: no duplicates, and listen counts stay."
+            echo
+            echo '```'
+            cat compare.txt
+            echo '```'
+            echo
+            echo "✅ **Approve:** Merge pull request → Confirm merge. This only updates the new feed; Spotify and Apple keep using the old feed until you switch them."
+          } > pr.md
+          if gh pr view import-past-episodes --json state -q .state 2>/dev/null | grep -q OPEN; then
+            gh pr edit import-past-episodes --body-file pr.md
+          else
+            gh pr create --head import-past-episodes --base main --title "📚 Import past episodes" --body-file pr.md
+          fi
