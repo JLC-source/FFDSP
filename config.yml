@@ -28,6 +28,9 @@ hosts:
   archive:
     # https://archive.org/download/<identifier>/<file>
     item_prefix: food-for-the-soul
+    # Past episodes imported from Spotify for Creators share one item
+    # (creating dozens of new items at once looks like spam to the archive).
+    past_item: food-for-the-soul-past-episodes
     collection: opensource_audio
   r2:
     # Not set up yet. Fill in when moving to Cloudflare R2.

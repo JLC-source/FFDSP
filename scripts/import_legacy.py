@@ -65,13 +65,13 @@ def upload(item, path, title, description, date, cfg):
     if existing.get(name) == os.path.getsize(path):
         print(f"    already on the Internet Archive")
         return
+    show = cfg["show"]
     md = {
         "mediatype": "audio",
         "collection": cfg["hosts"]["archive"]["collection"],
-        "title": title,
-        "description": description,
-        "creator": cfg["show"]["author"],
-        "date": date,
+        "title": f"{show['title']} — past episodes",
+        "description": f"{show['description']} Episodes of the {show['title']} podcast by {show['author']}.",
+        "creator": show["author"],
         "subject": ["Chassidus", "Torah", "Judaism", "podcast", cfg["show"]["title"]],
         "language": "eng",
     }
@@ -79,6 +79,10 @@ def upload(item, path, title, description, date, cfg):
                        access_key=os.environ["IA_ACCESS_KEY"], secret_key=os.environ["IA_SECRET_KEY"],
                        retries=10, retries_sleep=30):
         r.raise_for_status()
+    time.sleep(PAUSE_SECONDS)  # go slowly; the archive flags fast bulk uploads
+
+
+PAUSE_SECONDS = 90
 
 
 def main():
@@ -86,7 +90,6 @@ def main():
     xml = requests.get(cfg["legacy_feed_url"], timeout=120).content
     items = ET.fromstring(xml).find("channel").findall("item")
     have = {e["guid"] for e in load_episodes()}
-    prefix = cfg["hosts"]["archive"]["item_prefix"]
 
     todo = [i for i in reversed(items) if i.findtext("guid") not in have]  # oldest first
     print(f"{len(items)} episodes in the old feed, {len(todo)} to import")
@@ -101,7 +104,7 @@ def main():
         ext = EXT.get(enc.get("type"), "m4a")
         tag = short_hash(guid)
         fname = f"ffts-{slug}-{tag}.{ext}"
-        item = f"{prefix}-{date.replace('-', '')}-{tag}"
+        item = cfg["hosts"]["archive"]["past_item"]
         desc = (it.findtext("description") or "").strip()
         print(f"[{n}/{len(todo)}] {date} {title}")
 
