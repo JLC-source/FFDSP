@@ -26,7 +26,8 @@ jobs:
       - name: Continue from an earlier attempt
         run: |
           if git ls-remote --exit-code origin import-past-episodes >/dev/null; then
-            git fetch -q origin import-past-episodes && git checkout -q import-past-episodes
+            git fetch -q origin import-past-episodes
+            git checkout -q origin/import-past-episodes -- episodes site   # keep progress, use latest scripts
           fi
       - name: Copy past episodes to the Internet Archive
         env:
