@@ -19,8 +19,8 @@ def upload_archive(path, item, title, description, cfg):
     md = {
         "mediatype": "audio",
         "collection": h["collection"],
-        "title": title,
-        "description": description,
+        "title": f"{cfg['show']['title']} — {item.rsplit('-', 1)[-1]} episodes",
+        "description": f"{cfg['show']['description']} Episodes of the {cfg['show']['title']} podcast by {cfg['show']['author']}.",
         "creator": cfg["show"]["author"],
         "subject": ["Chassidus", "Torah", "Judaism", "podcast", cfg["show"]["title"]],
         "language": "eng",

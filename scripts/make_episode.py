@@ -38,7 +38,8 @@ def prepare(work):
         "pub_date": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "slug": f"{date}-{slug}",
         "audio_file": f"ffts-{date}-{slug}-{tag}.mp3",
-        "archive_item": f"{cfg['hosts']['archive']['item_prefix']}-{date.replace('-', '')}-{tag}",
+        # One archive item per year: creating many new items looks like spam to the archive.
+        "archive_item": f"{cfg['hosts']['archive']['item_prefix']}-{now.year}",
     }
     (work / "plan.json").write_text(json.dumps(plan, indent=2))
     shutil.move(work / "episode.mp3", work / plan["audio_file"])
