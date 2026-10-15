@@ -33,7 +33,8 @@ def cdata(text):
 def desc_html(text):
     if "<p>" in text:  # imported episodes already carry HTML
         return text
-    return "".join(f"<p>{html.escape(p.strip())}</p>" for p in str(text).split("\n\n") if p.strip())
+    paras = [p.strip() for p in str(text).split("\n\n") if p.strip()]
+    return "".join("<p>" + "<br>".join(html.escape(l.strip()) for l in p.split("\n")) + "</p>" for p in paras)
 
 
 def jpeg_size(path):
