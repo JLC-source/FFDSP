@@ -37,6 +37,22 @@ def desc_html(text):
     return "".join("<p>" + "<br>".join(html.escape(l.strip()) for l in p.split("\n")) + "</p>" for p in paras)
 
 
+def check_audio(url):
+    """Fail only if the file is really missing; the archive sometimes has brief hiccups."""
+    import time
+    for attempt in range(4):
+        try:
+            code = requests.head(url, allow_redirects=True, timeout=60).status_code
+        except requests.RequestException:
+            code = None
+        if code == 200:
+            return
+        if code in (403, 404, 410):
+            raise SystemExit(f"Audio missing ({code}): {url}")
+        time.sleep(15 * (attempt + 1))
+    print(f"Warning: could not confirm {url} right now (archive busy); publishing anyway")
+
+
 def jpeg_size(path):
     data = path.read_bytes()
     i = 2
@@ -72,8 +88,7 @@ def main(out, check_urls=False):
             number += 1
         url = audio_url(ep, cfg)
         if check_urls:
-            r = requests.head(url, allow_redirects=True, timeout=60)
-            assert r.status_code == 200, f"Audio not reachable ({r.status_code}): {url}"
+            check_audio(url)
         extra = ""
         if show.get("number_episodes") and ep.get("episode_type", "full") == "full":
             extra += f"\n      <itunes:episode>{ep.get('number', number)}</itunes:episode>"
