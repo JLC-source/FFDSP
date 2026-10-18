@@ -1,0 +1,15 @@
+guid: 0d347684-d748-47ef-8306-530c56b8da9f
+title: Lag BaOmer
+description: <p>The meaning behind the holiday</p>
+pub_date: '2026-05-04T19:36:03Z'
+episode_type: full
+duration_seconds: 2274
+audio:
+  file: ffts-2026-05-04-lag-baomer-078b2a9a.m4a
+  bytes: 36777767
+  type: audio/x-m4a
+  archive_item: food-for-the-soul-past-episodes
+imported_from:
+  feed: https://anchor.fm/s/102a4d0dc/podcast/rss
+  link: https://podcasters.spotify.com/pod/show/hilelraskin/episodes/Lag-BaOmer-e3isl74
+image: episode-art/2026-05-04-lag-baomer.jpg

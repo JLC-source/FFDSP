@@ -1,0 +1,15 @@
+guid: 3d1b16c7-ada9-4dd1-8cd6-1ff12b767367
+title: סודו של ל״ג בעומר
+description: <p>קבלה, משיח ועניינה של ספירת ההוד</p>
+pub_date: '2026-05-05T17:05:42Z'
+episode_type: full
+duration_seconds: 1777
+audio:
+  file: ffts-2026-05-05-episode-fdebb138.m4a
+  bytes: 28740360
+  type: audio/x-m4a
+  archive_item: food-for-the-soul-past-episodes
+imported_from:
+  feed: https://anchor.fm/s/102a4d0dc/podcast/rss
+  link: https://podcasters.spotify.com/pod/show/hilelraskin/episodes/ep-e3iu5u0
+image: episode-art/2026-05-05-episode.jpg

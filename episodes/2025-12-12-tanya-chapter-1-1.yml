@@ -1,0 +1,15 @@
+guid: b9ac3240-0b36-4cf3-a3ee-06f163dac255
+title: Tanya Chapter 1.1
+description: <p>Perek Alef</p>
+pub_date: '2025-12-12T14:48:05Z'
+episode_type: full
+duration_seconds: 2694
+audio:
+  file: ffts-2025-12-12-tanya-chapter-1-1-4f02c533.m4a
+  bytes: 43580783
+  type: audio/x-m4a
+  archive_item: food-for-the-soul-past-episodes
+imported_from:
+  feed: https://anchor.fm/s/102a4d0dc/podcast/rss
+  link: https://podcasters.spotify.com/pod/show/hilelraskin/episodes/Tanya-Chapter-1-1-e3c910v
+image: episode-art/2025-12-12-tanya-chapter-1-1.jpg
