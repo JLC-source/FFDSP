@@ -35,4 +35,21 @@ jobs:
           github_token: ${{ github.token }}
           claude_args: >-
             --allowedTools Read,Edit,Write
-            --append-system-prompt "This pull request adds one Food for the Soul podcast episode. Its text lives in the episodes/*.yml file (fields: title, description). Change only what Rabbi Raskin asks for, keep the YAML valid, and never change guid, audio, source, pub_date or processing."
+            --append-system-prompt "This pull request adds one Food for the Soul podcast episode. Its text lives in the episodes/*.yml file (fields: title, description, series, part). Its artwork is drawn from site/series/<series>/motif.svg (a symbolic SVG illustration, viewBox 0 0 1600 1200, transparent background, warm gold tones, no text) and site/series/<series>/series.yml (title_en, title_he, subtitle). To change the picture, edit motif.svg; the artwork JPG is redrawn automatically afterwards, so do not edit JPG files. Change only what Rabbi Raskin asks for, keep the YAML valid, and never change guid, audio, source, pub_date or processing."
+
+      - name: Redraw episode artwork
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH=$(gh pr view ${{ github.event.issue.number || github.event.pull_request.number }} --json headRefName -q .headRefName)
+          git fetch -q origin main "$BRANCH" && git checkout -q -B "$BRANCH" "origin/$BRANCH"
+          EPS=$(git diff --name-only origin/main...HEAD -- 'episodes/*.yml')
+          [ -z "$EPS" ] && exit 0
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg librsvg2-bin > /dev/null
+          mkdir -p ~/.local/share/fonts && cp fonts/*.ttf ~/.local/share/fonts/ && fc-cache -f > /dev/null
+          pip install -q PyYAML==6.0.3
+          python scripts/make_art.py episode $EPS
+          git config user.name "Food for the Soul pipeline"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site episodes
+          git diff --cached --quiet || { git commit -qm "Redraw episode artwork"; git push -q origin "$BRANCH"; }

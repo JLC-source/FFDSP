@@ -7,11 +7,30 @@ import json
 import os
 import shutil
 import sys
+import re
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
+import make_art
 from common import EPISODES_DIR, TRANSCRIPTS_DIR, load_config, save_episode, short_hash, slugify
+
+
+def series_from_meta(meta, work):
+    """Validate Claude's series choice; create the series (with its motif) if it is new."""
+    s = meta.get("series") or {}
+    slug = slugify(str(s.get("slug") or s.get("title_en") or ""))
+    if not slug or slug == "episode":
+        return None, None
+    part = meta.get("part")
+    part = int(part) if str(part).isdigit() else None
+    motif = work / "motif.svg"
+    motif_text = motif.read_text() if motif.exists() and "<svg" in motif.read_text() else None
+    created = make_art.create_series(
+        slug, str(s.get("title_en") or slug.replace("-", " ").title()),
+        str(s.get("title_he") or ""), str(s.get("subtitle") or "Rabbi Hilel Raskin"), motif_text)
+    print(f"Series: {slug} ({'new' if created else 'existing'}), part {part}")
+    return slug, part
 
 
 def prepare(work):
@@ -26,6 +45,7 @@ def prepare(work):
     if not 10 <= len(desc) <= 4000:
         raise SystemExit("Claude's description is missing or too long")
 
+    series, part = series_from_meta(meta, work)
     now = datetime.now(timezone.utc)
     date = now.strftime("%Y-%m-%d")
     slug = slugify(title)
@@ -40,6 +60,8 @@ def prepare(work):
         "audio_file": f"ffts-{date}-{slug}-{tag}.mp3",
         # One archive item per year: creating many new items looks like spam to the archive.
         "archive_item": f"{cfg['hosts']['archive']['item_prefix']}-{now.year}",
+        "series": series,
+        "part": part,
     }
     (work / "plan.json").write_text(json.dumps(plan, indent=2))
     shutil.move(work / "episode.mp3", work / plan["audio_file"])
@@ -79,17 +101,26 @@ def finalize(work):
         },
         "processing": stats,
     }
+    if plan.get("series"):
+        ep["series"] = plan["series"]
+        if plan.get("part"):
+            ep["part"] = plan["part"]
     EPISODES_DIR.mkdir(exist_ok=True)
-    save_episode(ep, EPISODES_DIR / f"{plan['slug']}.yml")
+    ep_path = EPISODES_DIR / f"{plan['slug']}.yml"
+    save_episode(ep, ep_path)
+    make_art.episode_art(ep_path)
 
     mins = stats["duration_seconds"] // 60
     notes = f"\n> **Notes from Claude:** {plan['notes']}\n" if plan["notes"] else ""
     site = cfg["site_url"].rstrip("/")
     repo = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'JLC-source/FFDSP')}"
+    branch = f"episode/{src['id']}"
+    art = (f"\n<img src=\"https://raw.githubusercontent.com/{repo.split('github.com/')[1]}/{branch}/site/episode-art/{plan['slug']}.jpg\" width=\"360\" alt=\"Episode artwork\">\n"
+           if plan.get("series") else "")
     body = f"""## 🎧 New episode ready for your approval
 
 **{plan['title']}**
-
+{art}
 {plan['description']}
 {notes}
 | | |
@@ -102,7 +133,8 @@ def finalize(work):
 
 ### What to do
 - ✅ **Approve:** tap **Merge pull request** → **Confirm merge**. It goes live at {site}/feed.xml within a few minutes.
-- ✏️ **Change something:** write a comment that starts with `@claude`, for example
+- ✏️ **Change something** (text or picture): write a comment that starts with `@claude`, for example
+  `@claude make the picture show a shofar instead`, or
   `@claude make the title "Mayim Rabim: Love That Water Can't Extinguish"` or
   `@claude shorten the description and mention it is from the 5738 maamar`.
 - ❌ **Reject:** tap **Close pull request**. Nothing is published. To redo it later,

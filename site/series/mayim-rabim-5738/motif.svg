@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- "Many waters cannot extinguish the love" — a flame that the great waters cannot put out -->
+  <defs>
+    <radialGradient id="mr-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#e3a43f" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mr-flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#d9631f"/>
+      <stop offset="0.45" stop-color="#f0a432"/>
+      <stop offset="1" stop-color="#fbe3a0"/>
+    </linearGradient>
+    <linearGradient id="mr-core" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#fff3cf"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="mr-w1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7fb3"/>
+      <stop offset="1" stop-color="#16365c"/>
+    </linearGradient>
+    <linearGradient id="mr-w2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c6597"/>
+      <stop offset="1" stop-color="#0f2744"/>
+    </linearGradient>
+    <linearGradient id="mr-w3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f4f7d"/>
+      <stop offset="1" stop-color="#0a1b31"/>
+    </linearGradient>
+  </defs>
+
+  <!-- warm light around the flame -->
+  <circle cx="800" cy="470" r="470" fill="url(#mr-glow)"/>
+  <circle cx="800" cy="470" r="300" fill="none" stroke="#d9b45a" stroke-opacity="0.25" stroke-width="3"/>
+  <circle cx="800" cy="470" r="380" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- the flame -->
+  <path d="M800 120 C 860 230, 960 300, 950 450 C 942 580, 870 660, 800 668
+           C 730 660, 658 580, 650 450 C 645 360, 700 320, 728 250
+           C 742 300, 760 330, 785 345 C 780 270, 770 200, 800 120 Z" fill="url(#mr-flame)"/>
+  <path d="M800 330 C 835 400, 880 440, 872 520 C 866 590, 835 630, 800 634
+           C 765 630, 734 590, 728 520 C 724 470, 760 430, 778 395
+           C 786 425, 796 440, 806 446 C 800 405, 792 370, 800 330 Z" fill="url(#mr-core)" opacity="0.9"/>
+
+  <!-- the great waters, rising but not reaching -->
+  <path d="M0 760 C 120 700, 210 690, 300 735 C 380 775, 430 700, 520 690
+           C 600 682, 640 745, 700 760 C 760 775, 840 775, 900 760
+           C 960 745, 1000 682, 1080 690 C 1170 700, 1220 775, 1300 735
+           C 1390 690, 1480 700, 1600 760 L 1600 1200 L 0 1200 Z" fill="url(#mr-w1)" opacity="0.95"/>
+  <path d="M0 860 C 140 800, 240 830, 330 880 C 420 930, 520 840, 620 845
+           C 700 850, 740 905, 800 905 C 860 905, 900 850, 980 845
+           C 1080 840, 1180 930, 1270 880 C 1360 830, 1460 800, 1600 860
+           L 1600 1200 L 0 1200 Z" fill="url(#mr-w2)"/>
+  <path d="M0 980 C 160 930, 280 970, 400 1010 C 520 1050, 640 975, 800 985
+           C 960 975, 1080 1050, 1200 1010 C 1320 970, 1440 930, 1600 980
+           L 1600 1200 L 0 1200 Z" fill="url(#mr-w3)"/>
+
+  <!-- foam lines -->
+  <path d="M300 735 C 380 775, 430 700, 520 690" fill="none" stroke="#bfe0f2" stroke-opacity="0.55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1080 690 C 1170 700, 1220 775, 1300 735" fill="none" stroke="#bfe0f2" stroke-opacity="0.55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M620 845 C 700 850, 740 905, 800 905 C 860 905, 900 850, 980 845" fill="none" stroke="#bfe0f2" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- spray that falls short of the flame -->
+  <g fill="#bfe0f2" fill-opacity="0.6">
+    <circle cx="560" cy="640" r="9"/><circle cx="600" cy="600" r="6"/><circle cx="530" cy="590" r="5"/>
+    <circle cx="1040" cy="640" r="9"/><circle cx="1000" cy="600" r="6"/><circle cx="1070" cy="590" r="5"/>
+  </g>
+</svg>

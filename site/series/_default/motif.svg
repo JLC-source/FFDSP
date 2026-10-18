@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- Default motif: an open sefer with light rising from it -->
+  <defs>
+    <radialGradient id="df-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f6c96b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="df-page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7ecd2"/>
+      <stop offset="1" stop-color="#d9c49a"/>
+    </linearGradient>
+    <linearGradient id="df-ray" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f3d27a" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#f3d27a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="800" cy="560" r="480" fill="url(#df-glow)"/>
+  <g fill="url(#df-ray)">
+    <path d="M790 640 L 700 140 L 760 140 Z"/><path d="M810 640 L 840 140 L 900 140 Z"/>
+    <path d="M780 650 L 470 230 L 520 200 Z"/><path d="M820 650 L 1080 200 L 1130 230 Z"/>
+    <path d="M770 660 L 330 420 L 360 370 Z"/><path d="M830 660 L 1240 370 L 1270 420 Z"/>
+  </g>
+  <path d="M800 720 C 690 660, 520 650, 340 690 L 340 980 C 520 940, 690 950, 800 1010 Z" fill="url(#df-page)"/>
+  <path d="M800 720 C 910 660, 1080 650, 1260 690 L 1260 980 C 1080 940, 910 950, 800 1010 Z" fill="url(#df-page)"/>
+  <path d="M800 720 L 800 1010" stroke="#b08a3e" stroke-width="6"/>
+  <g stroke="#b9a275" stroke-width="7" stroke-linecap="round" opacity="0.8">
+    <path d="M410 760 C 540 735, 650 740, 740 770"/><path d="M410 820 C 540 795, 650 800, 740 830"/>
+    <path d="M410 880 C 540 855, 650 860, 740 890"/><path d="M860 770 C 950 740, 1060 735, 1190 760"/>
+    <path d="M860 830 C 950 800, 1060 795, 1190 820"/><path d="M860 890 C 950 860, 1060 855, 1190 880"/>
+  </g>
+  <path d="M330 990 C 520 950, 690 960, 800 1025 C 910 960, 1080 950, 1270 990" fill="none" stroke="#d9b45a" stroke-width="10"/>
+</svg>

@@ -65,7 +65,8 @@ jobs:
           cache: pip
       - name: Install tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg librsvg2-bin > /dev/null
+          mkdir -p ~/.local/share/fonts && cp fonts/*.ttf ~/.local/share/fonts/ && fc-cache -f > /dev/null
           curl -fsSLo rclone.zip "https://downloads.rclone.org/${RC_RELEASE}/rclone-${RC_RELEASE}-linux-amd64.zip"
           unzip -q rclone.zip && sudo install rclone-*/rclone /usr/local/bin/ && rm -rf rclone*
           pip install -q -r requirements.txt
@@ -98,6 +99,7 @@ jobs:
       - name: Gather style examples
         run: |
           python scripts/style_examples.py > "$WORK/style.md"
+          python scripts/series_list.py > "$WORK/series.md"
           python -c 'import json,os; print("Original file name:", json.load(open(os.environ["WORK"]+"/source.json"))["name"])' > "$WORK/filename.txt"
 
       - name: Prepare Claude token
@@ -126,11 +128,15 @@ jobs:
             - work/style.md — recent episode titles and descriptions, newest first; match this style closely.
               If this class continues a series listed there (same topic), title it as the next part.
 
+            - work/series.md — the class series that already exist, with the last part number of each
+
             Then write work/meta.json containing exactly this JSON object:
             {
               "title": "...",
               "description": "...",
-              "notes_for_rabbi": "..."
+              "notes_for_rabbi": "...",
+              "series": {"slug": "...", "title_en": "...", "title_he": "...", "subtitle": "..."},
+              "part": 1
             }
 
             Rules:
@@ -143,7 +149,21 @@ jobs:
               existing descriptions do. No hashtags, no emojis, no markdown.
             - notes_for_rabbi: one short sentence about anything you were unsure of (a name, a
               source, a term), or "" if nothing.
-            Write only that file. Do not modify anything else.
+            - series: the course/series this class belongs to (usually the maamar or sicha being
+              learned). If it continues a series in work/series.md, copy that series' slug and names
+              exactly and set "part" to the next number. Otherwise start a new series: slug is short
+              lowercase-with-dashes (e.g. "vayeitzei-5745"), title_en is the transliterated name
+              (e.g. "Mayim Rabim"), title_he is the name in Hebrew letters (e.g. "מים רבים"),
+              subtitle is like "Maamar 5738 · Rabbi Hilel Raskin". part is a number, or null for a
+              one-off class.
+            - Only when you START A NEW SERIES, also write work/motif.svg: a symbolic illustration of
+              the series' central idea in a warm, dignified Chassidic style (examples: a flame, a
+              sukkah, a shofar, a menorah, a Torah scroll, light rays, a ladder, a seed). Look at
+              site/series/mayim-rabim-5738/motif.svg for the style and quality. Rules: one <svg>
+              with viewBox="0 0 1600 1200", transparent background (it sits on deep navy), gold
+              and warm tones with blues as accents, smooth gradients, no text or letters, no
+              people's faces, no images or external links, prefix every id with the series slug.
+            Write only these files. Do not modify anything else.
 
       - name: Check Claude's output and choose file names
         run: |
@@ -176,7 +196,7 @@ jobs:
           git config user.name "Food for the Soul pipeline"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
-          git add episodes transcripts
+          git add episodes transcripts site
           git commit -m "New episode: $TITLE"
           git push --force origin "$BRANCH"
           if gh pr view "$BRANCH" --json state -q .state 2>/dev/null | grep -q OPEN; then
