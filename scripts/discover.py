@@ -23,7 +23,7 @@ def main():
     cfg = load_config()
     d = cfg["drive"]
     listing = subprocess.run(
-        ["rclone", "lsjson", "--files-only", "--no-mimetype", f"{d['remote']}{d['inbox']}"],
+        ["rclone", "lsjson", "--files-only", f"{d['remote']}{d['inbox']}"],
         check=True, stdout=subprocess.PIPE, text=True,
     ).stdout
     exts = {e.lower() for e in d["audio_extensions"]}
@@ -32,7 +32,8 @@ def main():
     new = []
     for f in sorted(json.loads(listing), key=lambda f: f["ModTime"]):
         ext = f["Name"].rsplit(".", 1)[-1].lower() if "." in f["Name"] else ""
-        if ext not in exts:
+        mime = f.get("MimeType", "")
+        if ext not in exts and not mime.startswith(("audio/", "video/")):
             print(f"Ignoring non-audio file: {f['Name']}")
             continue
         if f["ID"] in skip:
