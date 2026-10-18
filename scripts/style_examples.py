@@ -17,13 +17,14 @@ def strip_html(s):
 
 
 def main(limit=25):
-    eps = load_episodes()
-    if len(eps) >= 8:
-        rows = [(e["title"], e.get("description", "")) for e in reversed(eps)]
-    else:
+    # Newest episodes first, so Claude can see an ongoing series (e.g. "part 1" → "part 2").
+    rows = [(e["title"], strip_html(e.get("description", ""))) for e in reversed(load_episodes())]
+    seen = {t for t, _ in rows}
+    if len(rows) < 8:
         xml = requests.get(load_config()["legacy_feed_url"], timeout=60).content
         items = ET.fromstring(xml).find("channel").findall("item")
-        rows = [(i.findtext("title"), strip_html(i.findtext("description"))) for i in items]
+        rows += [(i.findtext("title"), strip_html(i.findtext("description"))) for i in items
+                 if i.findtext("title") not in seen]
     print("# Recent Food for the Soul episodes (newest first)\n")
     for title, desc in rows[:limit]:
         print(f"- Title: {title}\n  Description: {desc}\n")

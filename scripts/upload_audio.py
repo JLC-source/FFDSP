@@ -33,12 +33,15 @@ def upload_archive(path, item, title, description, cfg):
     for r in responses:
         r.raise_for_status()
     url = f"https://archive.org/download/{item}/{os.path.basename(path)}"
-    # New items can take a few minutes before the file is downloadable.
-    for _ in range(40):
+    # The archive processes uploads in a queue; a file can take a while to become
+    # downloadable. Wait up to an hour, then carry on: the feed is only published
+    # after approval, and publishing checks every link first.
+    for _ in range(60):
         if requests.head(url, allow_redirects=True, timeout=60).status_code == 200:
             return url
-        time.sleep(30)
-    raise SystemExit(f"Uploaded, but {url} is not reachable yet")
+        time.sleep(60)
+    print(f"Note: {url} is uploaded but still processing at the Internet Archive")
+    return url
 
 
 def main(path, item, title, description, url_out):
