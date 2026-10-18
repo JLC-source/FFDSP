@@ -123,7 +123,8 @@ jobs:
             Read these files:
             - work/filename.txt — the original recording's file name (often names the topic or source, e.g. a maamar and year)
             - work/transcript.txt — automatic transcript (may misspell Hebrew terms; correct them in your writing)
-            - work/style.md — recent episode titles and descriptions; match this style closely
+            - work/style.md — recent episode titles and descriptions, newest first; match this style closely.
+              If this class continues a series listed there (same topic), title it as the next part.
 
             Then write work/meta.json containing exactly this JSON object:
             {
