@@ -1,0 +1,27 @@
+guid: 6ed73c8d-cac4-47de-888b-5cdc899bc62a
+title: Igeret HaTeshuva - Joy and a broken heart
+description: |-
+  How can a Jew be heartbroken over a mistake and still be truly happy? Starting from Lech Lecha and the idea that even our past is part of the journey, the class learns chapter 11 of Igeret HaTeshuva and explains why sadness after a sin is worse than the sin itself, and why Hashem is so quick to forgive.
+  Igeret HaTeshuva chapter 11, Tanya
+pub_date: '2026-10-21T10:49:49Z'
+episode_type: full
+duration_seconds: 2470
+audio:
+  file: ffts-2026-10-21-igeret-hateshuva-joy-and-a-broken-heart-5376566a.mp3
+  bytes: 19758671
+  type: audio/mpeg
+  archive_item: food-for-the-soul-2026
+transcript: transcripts/2026-10-21-igeret-hateshuva-joy-and-a-broken-heart.srt
+source:
+  drive_file_id: 1uumjiMRRZuLxe92mgVsyhG0Nsl4HUynS
+  drive_file_name: 580 Tomchei Temimim Way 79.m4a
+  recorded: '2026-10-20T13:31:34.262Z'
+processing:
+  duration_seconds: 2470
+  loudness_lufs: -16.4
+  loudness_range_lu: 5.6
+  true_peak_dbfs: -0.5
+  original_loudness_lufs: -18.44
+series: igeret-hateshuva
+part: 1
+image: episode-art/2026-10-21-igeret-hateshuva-joy-and-a-broken-heart.jpg
