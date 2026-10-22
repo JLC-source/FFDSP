@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <defs>
+    <radialGradient id="tanya-32-glow" cx="50%" cy="55%" r="50%">
+      <stop offset="0" stop-color="#ffcf70" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f0a64a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tanya-32-flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#d9702a"/>
+      <stop offset="0.5" stop-color="#f6b845"/>
+      <stop offset="1" stop-color="#fff0b8"/>
+    </linearGradient>
+    <linearGradient id="tanya-32-core" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f6b845"/>
+      <stop offset="1" stop-color="#fffbe6"/>
+    </linearGradient>
+    <linearGradient id="tanya-32-log" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8683a"/>
+      <stop offset="1" stop-color="#5a3320"/>
+    </linearGradient>
+    <linearGradient id="tanya-32-heart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe3a8"/>
+      <stop offset="1" stop-color="#d9962e"/>
+    </linearGradient>
+  </defs>
+  <circle cx="800" cy="600" r="520" fill="url(#tanya-32-glow)"/>
+  <g>
+    <rect x="430" y="880" width="740" height="110" rx="55" fill="url(#tanya-32-log)" transform="rotate(-8 800 935)"/>
+    <rect x="430" y="880" width="740" height="110" rx="55" fill="url(#tanya-32-log)" transform="rotate(8 800 935)"/>
+    <ellipse cx="505" cy="905" rx="30" ry="50" fill="#e0a56a" transform="rotate(-8 505 905)"/>
+    <ellipse cx="1095" cy="905" rx="30" ry="50" fill="#e0a56a" transform="rotate(8 1095 905)"/>
+  </g>
+  <path d="M800 190C860 330 1010 400 1010 620C1010 780 920 890 800 890C680 890 590 780 590 620C590 520 650 470 690 400C700 470 730 500 750 510C720 400 760 280 800 190Z" fill="url(#tanya-32-flame)"/>
+  <path d="M800 450C850 540 920 590 920 710C920 810 870 880 800 880C730 880 680 810 680 710C680 640 730 600 760 540C770 580 785 595 795 600C780 540 785 500 800 450Z" fill="url(#tanya-32-core)" opacity="0.9"/>
+  <path d="M800 840C740 790 710 750 710 715C710 685 732 665 758 665C778 665 792 676 800 692C808 676 822 665 842 665C868 665 890 685 890 715C890 750 860 790 800 840Z" fill="url(#tanya-32-heart)" stroke="#fff3cf" stroke-width="4"/>
+  <g fill="#ffe3a8">
+    <circle cx="610" cy="360" r="9"/><circle cx="1000" cy="300" r="12"/><circle cx="1090" cy="480" r="7"/>
+    <circle cx="520" cy="520" r="8"/><circle cx="930" cy="190" r="6"/><circle cx="690" cy="220" r="7"/>
+  </g>
+  <g fill="none" stroke="#6f9fd8" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round">
+    <path d="M300 700C300 420 480 250 700 190"/>
+    <path d="M1300 700C1300 420 1120 250 900 190"/>
+  </g>
+</svg>
