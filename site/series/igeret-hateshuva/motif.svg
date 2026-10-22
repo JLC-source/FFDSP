@@ -11,8 +11,8 @@
       <stop offset="1" stop-color="#b8661f"/>
     </linearGradient>
     <linearGradient id="igeret-hateshuva-path" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3f7fb3"/>
-      <stop offset="1" stop-color="#16365c"/>
+      <stop offset="0" stop-color="#c9806e"/>
+      <stop offset="1" stop-color="#4a1a26"/>
     </linearGradient>
     <linearGradient id="igeret-hateshuva-core" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0" stop-color="#fff3cf"/>

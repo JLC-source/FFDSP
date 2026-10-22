@@ -28,7 +28,8 @@ def series_from_meta(meta, work):
     motif_text = motif.read_text() if motif.exists() and "<svg" in motif.read_text() else None
     created = make_art.create_series(
         slug, str(s.get("title_en") or slug.replace("-", " ").title()),
-        str(s.get("title_he") or ""), str(s.get("subtitle") or "Rabbi Hilel Raskin"), motif_text)
+        str(s.get("title_he") or ""), str(s.get("subtitle") or "Rabbi Hilel Raskin"), motif_text,
+        s.get("palette"))
     print(f"Series: {slug} ({'new' if created else 'existing'}), part {part}")
     return slug, part
 

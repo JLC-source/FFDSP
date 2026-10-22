@@ -1,4 +1,11 @@
 title_en: Igeret HaTeshuva
 title_he: אגרת התשובה
 subtitle: Tanya · Rabbi Hilel Raskin
-accent: '#d9b45a'
+bg_light: "#4a1a26"
+bg: "#2a0d15"
+bg_dark: "#14060a"
+accent: "#e8b4a0"
+title_light: "#f6d3c2"
+title_dark: "#d08e78"
+text: "#f8ebe4"
+subtext: "#d9b9ad"

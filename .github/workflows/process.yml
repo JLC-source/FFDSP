@@ -135,7 +135,9 @@ jobs:
               "title": "...",
               "description": "...",
               "notes_for_rabbi": "...",
-              "series": {"slug": "...", "title_en": "...", "title_he": "...", "subtitle": "..."},
+              "series": {"slug": "...", "title_en": "...", "title_he": "...", "subtitle": "...",
+                         "palette": {"bg_light": "#...", "bg": "#...", "bg_dark": "#...", "accent": "#...",
+                                     "title_light": "#...", "title_dark": "#...", "text": "#...", "subtext": "#..."}},
               "part": 1
             }
 
@@ -156,6 +158,12 @@ jobs:
               (e.g. "Mayim Rabim"), title_he is the name in Hebrew letters (e.g. "מים רבים"),
               subtitle is like "Maamar 5738 · Rabbi Hilel Raskin". part is a number, or null for a
               one-off class.
+            - palette (only needed for a NEW series): colors that suit the topic and differ from the
+              existing series, e.g. deep burgundy with rose gold for teshuva, forest green with warm
+              gold for Sukkot, royal blue with silver for Chanukah, deep purple with gold for
+              Moshiach. bg_light/bg/bg_dark are a DARK background (center to edge); accent,
+              title_light/title_dark (the Hebrew title gradient), text and subtext are LIGHT colors
+              that read clearly on it. Use 6-digit hex colors. Draw the motif in the same palette.
             - Only when you START A NEW SERIES, also write work/motif.svg: a symbolic illustration of
               the series' central idea in a warm, dignified Chassidic style (examples: a flame, a
               sukkah, a shofar, a menorah, a Torah scroll, light rays, a ladder, a seed). Look at
