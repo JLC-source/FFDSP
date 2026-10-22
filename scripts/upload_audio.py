@@ -25,13 +25,22 @@ def upload_archive(path, item, title, description, cfg):
         "subject": ["Chassidus", "Torah", "Judaism", "podcast", cfg["show"]["title"]],
         "language": "eng",
     }
-    responses = ia.upload(
-        item, files={os.path.basename(path): path}, metadata=md,
-        access_key=os.environ["IA_ACCESS_KEY"], secret_key=os.environ["IA_SECRET_KEY"],
-        retries=10, retries_sleep=30, verbose=True,
-    )
-    for r in responses:
-        r.raise_for_status()
+    # The archive is sometimes slow or briefly down; keep trying for about 40 minutes.
+    for attempt in range(1, 9):
+        try:
+            responses = ia.upload(
+                item, files={os.path.basename(path): path}, metadata=md,
+                access_key=os.environ["IA_ACCESS_KEY"], secret_key=os.environ["IA_SECRET_KEY"],
+                retries=10, retries_sleep=30, verbose=True,
+            )
+            for r in responses:
+                r.raise_for_status()
+            break
+        except (requests.ConnectionError, requests.Timeout) as e:
+            if attempt == 8:
+                raise
+            print(f"Internet Archive not responding (attempt {attempt}): {e.__class__.__name__}; retrying in 5 min")
+            time.sleep(300)
     url = f"https://archive.org/download/{item}/{os.path.basename(path)}"
     # The archive processes uploads in a queue; a file can take a while to become
     # downloadable. Wait up to an hour, then carry on: the feed is only published
