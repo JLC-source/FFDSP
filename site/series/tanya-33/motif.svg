@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- "A dwelling place below" — a lit home with the sun's light filling the world -->
+  <defs>
+    <radialGradient id="tanya-33-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.6"/>
+      <stop offset="0.5" stop-color="#e3a43f" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tanya-33-sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbe3a0"/>
+      <stop offset="1" stop-color="#e3a43f"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7fb3"/>
+      <stop offset="1" stop-color="#16365c"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0c05a"/>
+      <stop offset="1" stop-color="#b87a26"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-door" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f0a432"/>
+      <stop offset="1" stop-color="#fff3cf"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="800" cy="250" r="520" fill="url(#tanya-33-glow)"/>
+
+  <!-- rays of light descending from the sun -->
+  <g stroke="#f0c05a" stroke-linecap="round" stroke-opacity="0.45" stroke-width="6">
+    <line x1="800" y1="250" x2="260" y2="720"/>
+    <line x1="800" y1="250" x2="430" y2="560"/>
+    <line x1="800" y1="250" x2="1170" y2="560"/>
+    <line x1="800" y1="250" x2="1340" y2="720"/>
+    <line x1="800" y1="250" x2="560" y2="470"/>
+    <line x1="800" y1="250" x2="1040" y2="470"/>
+  </g>
+
+  <!-- the sun -->
+  <circle cx="800" cy="250" r="110" fill="url(#tanya-33-sun)"/>
+  <circle cx="800" cy="250" r="150" fill="none" stroke="#d9b45a" stroke-opacity="0.3" stroke-width="3"/>
+  <circle cx="800" cy="250" r="195" fill="none" stroke="#d9b45a" stroke-opacity="0.15" stroke-width="2"/>
+
+  <!-- the dwelling -->
+  <rect x="610" y="700" width="380" height="270" rx="6" fill="url(#tanya-33-wall)"/>
+  <path d="M570 710 L800 540 L1030 710 Z" fill="url(#tanya-33-roof)"/>
+  <path d="M800 540 L1030 710 L1000 710 L800 565 Z" fill="#fbe3a0" opacity="0.35"/>
+  <path d="M740 970 L740 820 Q800 760 860 820 L860 970 Z" fill="url(#tanya-33-door)"/>
+  <rect x="650" y="760" width="55" height="70" rx="6" fill="url(#tanya-33-door)" opacity="0.9"/>
+  <rect x="895" y="760" width="55" height="70" rx="6" fill="url(#tanya-33-door)" opacity="0.9"/>
+
+  <!-- light spilling from the door -->
+  <path d="M740 970 L660 1090 L940 1090 L860 970 Z" fill="#f6c96b" opacity="0.28"/>
+
+  <!-- ground -->
+  <path d="M0 970 C 300 940, 520 1000, 800 975 C 1080 950, 1300 1000, 1600 965 L1600 1200 L0 1200 Z" fill="#0f2744" opacity="0.7"/>
+  <path d="M0 1010 C 300 985, 520 1040, 800 1015 C 1080 990, 1300 1040, 1600 1005" fill="none" stroke="#d9b45a" stroke-opacity="0.4" stroke-width="3"/>
+</svg>
