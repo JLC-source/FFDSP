@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- Rachel's resting place on the road, and smoke rising from a warm home -->
+  <defs>
+    <radialGradient id="rachel-and-the-matriarchs-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rachel-and-the-matriarchs-dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d58a"/>
+      <stop offset="1" stop-color="#b9833a"/>
+    </linearGradient>
+    <linearGradient id="rachel-and-the-matriarchs-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c47a"/>
+      <stop offset="1" stop-color="#8f5f2a"/>
+    </linearGradient>
+    <linearGradient id="rachel-and-the-matriarchs-road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3b765" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#7a5a2e" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="rachel-and-the-matriarchs-smoke" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#9fc3e6" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#9fc3e6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="800" cy="560" r="520" fill="url(#rachel-and-the-matriarchs-glow)"/>
+  <circle cx="800" cy="560" r="330" fill="none" stroke="#e8c47a" stroke-opacity="0.25" stroke-width="3"/>
+
+  <!-- road winding toward the tomb -->
+  <path d="M560 1140 C 700 1000, 960 960, 840 860 C 780 810, 800 780, 800 760 L 880 760
+           C 900 800, 1000 860, 1060 940 C 1140 1040, 1240 1100, 1300 1140 Z" fill="url(#rachel-and-the-matriarchs-road)"/>
+
+  <!-- the tomb -->
+  <rect x="640" y="540" width="320" height="230" rx="6" fill="url(#rachel-and-the-matriarchs-wall)"/>
+  <path d="M660 540 C 660 380, 940 380, 940 540 Z" fill="url(#rachel-and-the-matriarchs-dome)"/>
+  <path d="M760 770 L 760 650 C 760 610, 840 610, 840 650 L 840 770 Z" fill="#2f1026" opacity="0.85"/>
+  <rect x="620" y="760" width="360" height="22" rx="4" fill="#b9833a"/>
+  <path d="M800 385 L 800 340" stroke="#f3d58a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M800 296 L 812 324 L 788 324 Z M800 352 L 788 324 L 812 324 Z" fill="#f6c96b"/>
+
+  <!-- rising smoke from a home that is full though no one sees -->
+  <path d="M1180 700 C 1140 620, 1220 560, 1180 480 C 1150 420, 1210 360, 1180 290" fill="none"
+        stroke="url(#rachel-and-the-matriarchs-smoke)" stroke-width="26" stroke-linecap="round"/>
+  <path d="M1250 700 C 1210 630, 1290 570, 1250 500 C 1225 450, 1270 400, 1250 340" fill="none"
+        stroke="url(#rachel-and-the-matriarchs-smoke)" stroke-width="20" stroke-linecap="round"/>
+  <rect x="1150" y="700" width="130" height="150" rx="4" fill="url(#rachel-and-the-matriarchs-wall)" opacity="0.9"/>
+  <rect x="1195" y="760" width="40" height="90" rx="3" fill="#f6c96b" opacity="0.8"/>
+
+  <g fill="#f6c96b" opacity="0.8">
+    <circle cx="400" cy="300" r="5"/><circle cx="520" cy="200" r="4"/><circle cx="1040" cy="180" r="5"/>
+    <circle cx="300" cy="520" r="3"/><circle cx="1360" cy="420" r="4"/>
+  </g>
+</svg>
