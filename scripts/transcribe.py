@@ -8,7 +8,7 @@ import time
 
 from faster_whisper import WhisperModel
 
-from common import ROOT, load_config
+from common import SHOW_DIR, load_config
 
 
 def ts(sec):
@@ -21,14 +21,14 @@ def ts(sec):
 
 def main(audio, out_base):
     cfg = load_config()
-    glossary = (ROOT / "glossary.txt").read_text().strip()
-    prompt = f"A Chassidus class in English with Hebrew and Yiddish terms: {glossary}."
+    glossary = (SHOW_DIR / "glossary.txt").read_text().strip()
+    prompt = f"{cfg['whisper_prompt']} {glossary}."
 
     started = time.time()
     model = WhisperModel(cfg["whisper_model"], device="cpu", compute_type="int8",
                          cpu_threads=os.cpu_count() or 4)
     segments, info = model.transcribe(
-        audio, language="en", beam_size=5, vad_filter=True,
+        audio, language=cfg["show"]["language"], beam_size=5, vad_filter=True,
         initial_prompt=prompt, condition_on_previous_text=False,
     )
 

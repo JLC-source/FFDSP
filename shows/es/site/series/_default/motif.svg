@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+<defs><radialGradient id="es-default-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffcf8a" stop-opacity=".55"/><stop offset=".45" stop-color="#e08a4a" stop-opacity=".18"/><stop offset="1" stop-color="#e08a4a" stop-opacity="0"/></radialGradient><linearGradient id="es-default-flame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff3d6"/><stop offset=".45" stop-color="#ffc66b"/><stop offset="1" stop-color="#e2733a"/></linearGradient><linearGradient id="es-default-copper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c79a"/><stop offset="1" stop-color="#c9784a"/></linearGradient><linearGradient id="es-default-wax" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9c9a8"/><stop offset=".5" stop-color="#f4ead6"/><stop offset="1" stop-color="#c7b48f"/></linearGradient></defs>
+<g transform="translate(-700,-440)">
+<circle cx="1500" cy="1000" r="760" fill="url(#es-default-glow)"/>
+<!-- rays -->
+<g stroke="#ffd9a0" stroke-opacity=".22" stroke-width="6" stroke-linecap="round">
+<line x1="1177" y1="949" x2="894" y2="1009"/>
+<line x1="1170" y1="880" x2="880" y2="880"/>
+<line x1="1177" y1="811" x2="894" y2="751"/>
+<line x1="1199" y1="746" x2="934" y2="628"/>
+<line x1="1233" y1="686" x2="998" y2="516"/>
+<line x1="1279" y1="635" x2="1085" y2="419"/>
+<line x1="1335" y1="594" x2="1190" y2="343"/>
+<line x1="1398" y1="566" x2="1308" y2="290"/>
+<line x1="1466" y1="552" x2="1435" y2="263"/>
+<line x1="1534" y1="552" x2="1565" y2="263"/>
+<line x1="1602" y1="566" x2="1692" y2="290"/>
+<line x1="1665" y1="594" x2="1810" y2="343"/>
+<line x1="1721" y1="635" x2="1915" y2="419"/>
+<line x1="1767" y1="686" x2="2002" y2="516"/>
+<line x1="1801" y1="746" x2="2066" y2="628"/>
+<line x1="1823" y1="811" x2="2106" y2="751"/>
+<line x1="1830" y1="880" x2="2120" y2="880"/>
+<line x1="1823" y1="949" x2="2106" y2="1009"/>
+</g>
+<!-- flame -->
+<path d="M1500 560 C1560 700 1690 800 1650 960 C1620 1080 1560 1120 1500 1120 C1440 1120 1380 1080 1350 960 C1310 800 1440 700 1500 560 Z" fill="url(#es-default-flame)"/>
+<path d="M1500 820 C1530 900 1580 950 1560 1030 C1545 1080 1525 1095 1500 1095 C1475 1095 1455 1080 1440 1030 C1420 950 1470 900 1500 820 Z" fill="#fffaf0" opacity=".85"/>
+<line x1="1500" y1="1100" x2="1500" y2="1160" stroke="#3a2a1e" stroke-width="10"/>
+<!-- candle -->
+<rect x="1400" y="1150" width="200" height="420" rx="14" fill="url(#es-default-wax)"/>
+<path d="M1400 1170 q30 40 60 0 q30 50 60 0 q40 60 80 0" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="8"/>
+<path d="M1250 1600 h500 l-70 -40 h-360 z" fill="url(#es-default-copper)"/>
+<rect x="1220" y="1600" width="560" height="34" rx="17" fill="url(#es-default-copper)"/>
+</g>
+</svg>

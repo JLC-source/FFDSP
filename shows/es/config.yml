@@ -1,0 +1,58 @@
+# Alimento para la Neshamá — settings for the Spanish show.
+# Same pipeline as Food for the Soul (see ../../config.yml); only these settings differ.
+
+show:
+  title: Alimento para la Neshamá
+  description: Jasidut explicado de forma simple y clara, con el Rab Hilel Raskin.
+  author: Rab Hilel Raskin
+  owner_name: Rab Hilel Raskin
+  owner_email: hilelraskin@gmail.com   # Spotify/Apple send ownership codes here
+  language: es
+  copyright: Rab Hilel Raskin
+  explicit: false
+  type: episodic
+  category: Religion & Spirituality
+  subcategory: Judaism
+  cover: cover.jpg                     # file in site/, 1400–3000 px square
+  number_episodes: true
+  feed_link_text: Feed RSS del podcast
+
+site_url: https://jlc-source.github.io/FFDSP/es
+
+audio_host: archive
+hosts:
+  archive:
+    item_prefix: alimento-para-la-neshama
+    collection: opensource_audio
+    subjects: [Jasidut, Torá, Judaísmo, español]
+  r2:
+    public_base_url: ""
+    bucket: ""
+
+# Drive folders inside "Torah Classes"
+drive:
+  remote: "ffts:"
+  inbox: Clases en Español/Inbox
+  done: Clases en Español/Done
+  audio_extensions: [m4a, mp3, wav, aac, ogg, opus, flac, mp4, mov, webm, amr, 3gp]
+  max_per_run: 4
+
+file_prefix: apln
+
+whisper_model: small
+whisper_prompt: "Una clase de Jasidut en español con términos en hebreo e ídish:"   # followed by glossary.txt
+
+# Series artwork: same design as the English show, with its own colors and words.
+art:
+  header: ALIMENTO PARA LA NESHAMÁ
+  header_spacing: 16
+  part_label: PARTE
+  palette:
+    bg_light: "#1b4247"
+    bg: "#0f2a2e"
+    bg_dark: "#071618"
+    accent: "#e0a172"
+    title_light: "#f6c79a"
+    title_dark: "#c9784a"
+    text: "#f6eedd"
+    subtext: "#d8cbb0"

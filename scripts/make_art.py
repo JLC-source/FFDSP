@@ -1,6 +1,6 @@
 """Episode artwork for a series: fixed show design + the series' own motif + "Part N".
 
-Each series lives in site/series/<slug>/ with:
+Each series lives in site/series/<slug>/ (shows/<code>/site/series/ for other shows) with:
   series.yml   title_en, title_he, subtitle, and optional colors (see PALETTE)
   motif.svg    a symbolic illustration drawn for the series (viewBox 0 0 1600 1200)
 
@@ -20,7 +20,11 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SERIES_DIR = ROOT / "site" / "series"
+sys.path.insert(0, str(ROOT / "scripts"))
+from common import SITE_DIR, load_config  # noqa: E402
+
+SERIES_DIR = SITE_DIR / "series"
+ART = load_config().get("art", {})  # per-show header, part label and default colors
 FONTS = ROOT / "fonts"
 SIZE = 3000
 
@@ -55,7 +59,7 @@ TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3
   <rect x="120" y="120" width="2760" height="2760" fill="none" stroke="{accent}" stroke-opacity="0.35" stroke-width="3"/>
 
   <text x="1500" y="330" text-anchor="middle" font-family="Assistant" font-weight="600"
-        font-size="92" letter-spacing="28" fill="{accent}">FOOD FOR THE SOUL</text>
+        font-size="92" letter-spacing="{header_spacing}" fill="{accent}">{header}</text>
 
   <!-- series motif -->
   <g mask="url(#motif-fade)">
@@ -74,16 +78,18 @@ TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3
 </svg>
 """
 
-# Default palette (deep navy + gold). A series can override any of these in its series.yml.
+# Default palette (deep navy + gold), or the show's own from config.yml "art".
+# A series can override any of these in its series.yml.
 PALETTE = {
     "bg_light": "#1c3150", "bg": "#0e1a2e", "bg_dark": "#070d18",
     "accent": "#d9b45a", "title_light": "#f3d27a", "title_dark": "#c8962e",
     "text": "#f5ecd8", "subtext": "#cdbf9f",
+    **ART.get("palette", {}),
 }
 
 PART = """  <rect x="1215" y="2620" width="570" height="150" rx="75" fill="{accent}"/>
   <text x="1500" y="2722" text-anchor="middle" font-family="Assistant" font-weight="700"
-        font-size="90" letter-spacing="14" fill="{bg}">PART {n}</text>"""
+        font-size="90" letter-spacing="14" fill="{bg}">{label} {n}</text>"""
 
 
 def motif_body(svg_text):
@@ -150,7 +156,6 @@ def create_series(slug, title_en, title_he, subtitle, motif_svg=None, palette=No
 
 def episode_art(ep_path):
     """Draw site/episode-art/<episode>.jpg for an episode with a series, and link it."""
-    sys.path.insert(0, str(ROOT / "scripts"))
     from common import save_episode
 
     ep_path = Path(ep_path)
@@ -158,8 +163,8 @@ def episode_art(ep_path):
     if not ep.get("series"):
         return
     out_rel = f"episode-art/{ep_path.stem}.jpg"
-    (ROOT / "site" / "episode-art").mkdir(parents=True, exist_ok=True)
-    render_series(ep["series"], ROOT / "site" / out_rel, ep.get("part"))
+    (SITE_DIR / "episode-art").mkdir(parents=True, exist_ok=True)
+    render_series(ep["series"], SITE_DIR / out_rel, ep.get("part"))
     if ep.get("image") != out_rel:
         ep["image"] = out_rel
         save_episode(ep, ep_path)
@@ -171,11 +176,14 @@ def _draw(d, meta, out, part, motif_text):
     title_he = meta.get("title_he", "")
     svg = TEMPLATE.format(
         S=SIZE, fonts=FONTS.as_uri(), **colors,
+        header=html.escape(ART.get("header", "FOOD FOR THE SOUL")),
+        header_spacing=ART.get("header_spacing", 28),
         motif=motif_body(motif_text),
         title_he=html.escape(title_he), he_size=fit(title_he, 330, 9),
         title_en=html.escape(title_en), en_size=fit(title_en, 170, 20),
         subtitle=html.escape(meta.get("subtitle", "")),
-        part=PART.format(accent=colors["accent"], bg=colors["bg"], n=part) if part else "",
+        part=PART.format(accent=colors["accent"], bg=colors["bg"], label=ART.get("part_label", "PART"),
+                         n=part) if part else "",
     )
     with tempfile.TemporaryDirectory() as tmp:
         svg_path, png_path = os.path.join(tmp, "art.svg"), os.path.join(tmp, "art.png")

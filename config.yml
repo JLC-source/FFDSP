@@ -47,5 +47,6 @@ drive:
 
 # ---- Processing ------------------------------------------------------------
 whisper_model: small
+whisper_prompt: "A Chassidus class in English with Hebrew and Yiddish terms:"   # followed by glossary.txt
 # Where Claude finds examples of your writing style until past episodes are imported.
 legacy_feed_url: https://anchor.fm/s/102a4d0dc/podcast/rss

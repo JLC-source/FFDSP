@@ -5,7 +5,7 @@ name: Publish feed
 on:
   push:
     branches: [main]
-    paths: ["episodes/**", "transcripts/**", "config.yml", "site/**", "scripts/build_feed.py", "scripts/common.py"]
+    paths: ["episodes/**", "transcripts/**", "config.yml", "site/**", "shows/**", "scripts/build_feed.py", "scripts/common.py"]
   workflow_dispatch:
 
 permissions:
@@ -29,10 +29,15 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install PyYAML==6.0.3 requests
-      - name: Build feed (and check every audio link works)
-        run: python scripts/build_feed.py _site --check-urls
+      - name: Build feeds (and check every audio link works)
+        run: |
+          python scripts/build_feed.py _site --check-urls
+          SHOW=es python scripts/build_feed.py _site/es --check-urls
       - name: Validate feed XML
-        run: python -c "import xml.etree.ElementTree as E; r=E.parse('_site/feed.xml').getroot(); print(len(r.find('channel').findall('item')), 'episodes in feed')"
+        run: |
+          for f in _site/feed.xml _site/es/feed.xml; do
+            python -c "import sys, xml.etree.ElementTree as E; r=E.parse(sys.argv[1]).getroot(); print(sys.argv[1], len(r.find('channel').findall('item')), 'episodes')" "$f"
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

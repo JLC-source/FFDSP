@@ -29,6 +29,18 @@ If anything fails, GitHub emails you.
 | Hebrew/Yiddish words for the transcriber | `glossary.txt` |
 | Automation | `.github/workflows/` and `scripts/` |
 
+## Spanish show: Alimento para la Neshamá
+
+The same pipeline also runs a Spanish sister podcast. Drop Spanish recordings in
+Drive **Torah Classes / Clases en Español / Inbox**; they come back as pull requests
+like the English ones, with Spanish titles and descriptions and the teal-and-copper artwork.
+
+- Feed: https://jlc-source.github.io/FFDSP/es/feed.xml
+- Everything for it lives in `shows/es/`: `config.yml`, `claude_prompt.md` (how Claude writes),
+  `glossary.txt` (terms for the transcriber), `episodes/`, `transcripts/`, `site/` (cover and series art).
+- Another show can be added the same way: a new `shows/<code>/` folder with its own `config.yml`
+  (add a build line for it in `.github/workflows/publish.yml`).
+
 ## Secrets (Settings → Secrets and variables → Actions)
 
 | Name | What |

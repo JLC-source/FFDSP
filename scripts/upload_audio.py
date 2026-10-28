@@ -19,11 +19,11 @@ def upload_archive(path, item, title, description, cfg):
     md = {
         "mediatype": "audio",
         "collection": h["collection"],
-        "title": f"{cfg['show']['title']} — {item.rsplit('-', 1)[-1]} episodes",
+        "title": f"{cfg['show']['title']} — {item.rsplit('-', 1)[-1]}",
         "description": f"{cfg['show']['description']} Episodes of the {cfg['show']['title']} podcast by {cfg['show']['author']}.",
         "creator": cfg["show"]["author"],
-        "subject": ["Chassidus", "Torah", "Judaism", "podcast", cfg["show"]["title"]],
-        "language": "eng",
+        "subject": h.get("subjects", ["Chassidus", "Torah", "Judaism"]) + ["podcast", cfg["show"]["title"]],
+        "language": {"en": "eng", "es": "spa"}.get(cfg["show"]["language"], cfg["show"]["language"]),
     }
     # The archive is sometimes slow or briefly down; keep trying for about 40 minutes.
     for attempt in range(1, 9):

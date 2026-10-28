@@ -1,7 +1,7 @@
 """Print the existing series (for Claude), with the last part number used in each."""
 import yaml
 
-from common import ROOT, load_episodes
+from common import SITE_DIR, load_episodes
 
 
 def main():
@@ -10,7 +10,7 @@ def main():
         if e.get("series") and e.get("part"):
             last[e["series"]] = max(last.get(e["series"], 0), int(e["part"]))
     print("# Existing series (slug — English / Hebrew — last part published)\n")
-    for f in sorted((ROOT / "site" / "series").glob("*/series.yml")):
+    for f in sorted((SITE_DIR / "series").glob("*/series.yml")):
         slug = f.parent.name
         if slug.startswith("_"):
             continue

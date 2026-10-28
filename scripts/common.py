@@ -1,5 +1,6 @@
 """Shared helpers: config, episode files, slugs, audio URLs."""
 import hashlib
+import os
 import re
 import unicodedata
 from pathlib import Path
@@ -7,18 +8,35 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-EPISODES_DIR = ROOT / "episodes"
-TRANSCRIPTS_DIR = ROOT / "transcripts"
 
 
-def load_config():
-    return yaml.safe_load((ROOT / "config.yml").read_text())
+def show_dir(show=None):
+    """Folder of one podcast: the repo itself for Food for the Soul, shows/<code>/ for the others.
+
+    The show is picked with the SHOW environment variable ("" = Food for the Soul, "es" = Spanish).
+    """
+    show = os.environ.get("SHOW", "") if show is None else show
+    return ROOT / "shows" / show if show else ROOT
 
 
-def load_episodes():
+def all_shows():
+    return [""] + sorted(p.parent.name for p in (ROOT / "shows").glob("*/config.yml"))
+
+
+SHOW_DIR = show_dir()
+EPISODES_DIR = SHOW_DIR / "episodes"
+TRANSCRIPTS_DIR = SHOW_DIR / "transcripts"
+SITE_DIR = SHOW_DIR / "site"
+
+
+def load_config(show=None):
+    return yaml.safe_load((show_dir(show) / "config.yml").read_text())
+
+
+def load_episodes(show=None):
     """All published episodes, oldest first."""
     eps = []
-    for p in sorted(EPISODES_DIR.glob("*.yml")):
+    for p in sorted((show_dir(show) / "episodes").glob("*.yml")):
         ep = yaml.safe_load(p.read_text())
         ep["_path"] = p
         eps.append(ep)
@@ -63,6 +81,6 @@ def audio_url(ep, cfg):
     raise SystemExit(f"Unknown audio_host: {host}")
 
 
-def drive_ids_done():
+def drive_ids_done(show=None):
     """Drive file IDs that already became an episode (never process twice)."""
-    return {e["source"]["drive_file_id"] for e in load_episodes() if e.get("source", {}).get("drive_file_id")}
+    return {e["source"]["drive_file_id"] for e in load_episodes(show) if e.get("source", {}).get("drive_file_id")}

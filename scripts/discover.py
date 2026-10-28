@@ -7,7 +7,7 @@ import json
 import os
 import subprocess
 
-from common import drive_ids_done, load_config
+from common import all_shows, drive_ids_done, load_config
 
 
 def open_pr_ids():
@@ -20,14 +20,28 @@ def open_pr_ids():
 
 
 def main():
-    cfg = load_config()
+    in_review = open_pr_ids()
+    new = []
+    for show in all_shows():
+        new += find_new(show, in_review)
+    print(f"New recordings to process: {len(new)}")
+    for f in new:
+        print(f"  - [{f['show'] or 'en'}] {f['name']}")
+    with open(os.environ.get("GITHUB_OUTPUT", "/dev/stdout"), "a") as out:
+        out.write(f"count={len(new)}\n")
+        out.write(f"matrix={json.dumps({'include': new})}\n")
+
+
+def find_new(show, in_review):
+    cfg = load_config(show)
     d = cfg["drive"]
+    print(f"Checking {cfg['show']['title']}: {d['remote']}{d['inbox']}")
     listing = subprocess.run(
         ["rclone", "lsjson", "--files-only", f"{d['remote']}{d['inbox']}"],
         check=True, stdout=subprocess.PIPE, text=True,
     ).stdout
     exts = {e.lower() for e in d["audio_extensions"]}
-    skip = drive_ids_done() | open_pr_ids()
+    skip = drive_ids_done(show) | in_review
 
     new = []
     for f in sorted(json.loads(listing), key=lambda f: f["ModTime"]):
@@ -39,15 +53,9 @@ def main():
         if f["ID"] in skip:
             print(f"Already handled: {f['Name']}")
             continue
-        new.append({"id": f["ID"], "name": f["Name"], "modtime": f["ModTime"]})
-
-    new = new[: d["max_per_run"]]
-    print(f"New recordings to process: {len(new)}")
-    for f in new:
-        print(f"  - {f['name']}")
-    with open(os.environ.get("GITHUB_OUTPUT", "/dev/stdout"), "a") as out:
-        out.write(f"count={len(new)}\n")
-        out.write(f"matrix={json.dumps({'include': new})}\n")
+        new.append({"id": f["ID"], "name": f["Name"], "modtime": f["ModTime"], "show": show,
+                    "done": f"{d['remote']}{d['done']}"})
+    return new[: d["max_per_run"]]
 
 
 if __name__ == "__main__":

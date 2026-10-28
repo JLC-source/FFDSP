@@ -13,7 +13,7 @@ from xml.sax.saxutils import escape
 
 import requests
 
-from common import ROOT, audio_url, load_config, load_episodes
+from common import SHOW_DIR, SITE_DIR, audio_url, load_config, load_episodes
 
 NS = ('xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" '
       'xmlns:atom="http://www.w3.org/2005/Atom" '
@@ -70,10 +70,10 @@ def main(out, check_urls=False):
     site = cfg["site_url"].rstrip("/")
     out = Path(out)
     shutil.rmtree(out, ignore_errors=True)
-    shutil.copytree(ROOT / "site", out)  # cover + episode artwork
+    shutil.copytree(SITE_DIR, out)  # cover + episode artwork
     (out / "transcripts").mkdir(exist_ok=True)
 
-    cover = ROOT / "site" / show["cover"]
+    cover = SITE_DIR / show["cover"]
     w, h = jpeg_size(cover)
     assert w == h and 1400 <= w <= 3000, f"Cover art must be square 1400–3000 px, got {w}x{h}"
 
@@ -97,9 +97,9 @@ def main(out, check_urls=False):
             extra += f'\n      <itunes:image href="{escape(img)}"/>'
         if ep.get("transcript"):
             t = Path(ep["transcript"])
-            shutil.copy(ROOT / t, out / "transcripts" / t.name)
+            shutil.copy(SHOW_DIR / t, out / "transcripts" / t.name)
             extra += (f'\n      <podcast:transcript url="{site}/transcripts/{escape(t.name)}" '
-                      f'type="application/srt" language="en"/>')
+                      f'type="application/srt" language="{show["language"]}"/>')
         d = desc_html(ep.get("description", ""))
         items.append(f"""    <item>
       <title>{escape(ep['title'])}</title>
@@ -152,7 +152,7 @@ def main(out, check_urls=False):
         f"<li><h2>{html.escape(e['title'])}</h2><p class=d>{rfc2822(e['pub_date'])[:16]}</p>"
         f"<audio controls preload=none src=\"{html.escape(audio_url(e, cfg))}\"></audio></li>"
         for e in reversed(eps))
-    (out / "index.html").write_text(f"""<!doctype html><html lang=en><meta charset=utf-8>
+    (out / "index.html").write_text(f"""<!doctype html><html lang={show['language']}><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>{html.escape(show['title'])}</title>
 <link rel=alternate type="application/rss+xml" href="feed.xml">
@@ -161,7 +161,7 @@ img{{width:160px;border-radius:8px}}h1{{margin:.3em 0 0}}ul{{list-style:none;pad
 h2{{font-size:1.1em;margin:0}}.d{{color:#5a6578;margin:2px 0 6px;font-size:.9em}}audio{{width:100%}}</style>
 <img src="{show['cover']}" alt="{html.escape(show['title'])} cover">
 <h1>{html.escape(show['title'])}</h1><p>{html.escape(show['description'])}<br>{html.escape(show['author'])}</p>
-<p><a href="feed.xml">Podcast RSS feed</a></p>
+<p><a href="feed.xml">{html.escape(show.get('feed_link_text', 'Podcast RSS feed'))}</a></p>
 <ul>{rows}</ul></html>
 """)
     (out / ".nojekyll").write_text("")

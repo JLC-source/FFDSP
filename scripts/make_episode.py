@@ -13,10 +13,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import make_art
-from common import EPISODES_DIR, TRANSCRIPTS_DIR, load_config, save_episode, short_hash, slugify
+from common import EPISODES_DIR, ROOT, SHOW_DIR, TRANSCRIPTS_DIR, load_config, save_episode, short_hash, slugify
 
 
-def series_from_meta(meta, work):
+def series_from_meta(meta, work, cfg):
     """Validate Claude's series choice; create the series (with its motif) if it is new."""
     s = meta.get("series") or {}
     slug = slugify(str(s.get("slug") or s.get("title_en") or ""))
@@ -28,7 +28,7 @@ def series_from_meta(meta, work):
     motif_text = motif.read_text() if motif.exists() and "<svg" in motif.read_text() else None
     created = make_art.create_series(
         slug, str(s.get("title_en") or slug.replace("-", " ").title()),
-        str(s.get("title_he") or ""), str(s.get("subtitle") or "Rabbi Hilel Raskin"), motif_text,
+        str(s.get("title_he") or ""), str(s.get("subtitle") or cfg["show"]["author"]), motif_text,
         s.get("palette"))
     print(f"Series: {slug} ({'new' if created else 'existing'}), part {part}")
     return slug, part
@@ -46,7 +46,7 @@ def prepare(work):
     if not 10 <= len(desc) <= 4000:
         raise SystemExit("Claude's description is missing or too long")
 
-    series, part = series_from_meta(meta, work)
+    series, part = series_from_meta(meta, work, cfg)
     now = datetime.now(timezone.utc)
     date = now.strftime("%Y-%m-%d")
     slug = slugify(title)
@@ -58,7 +58,7 @@ def prepare(work):
         "guid": str(uuid.uuid4()),
         "pub_date": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "slug": f"{date}-{slug}",
-        "audio_file": f"ffts-{date}-{slug}-{tag}.mp3",
+        "audio_file": f"{cfg.get('file_prefix', 'ffts')}-{date}-{slug}-{tag}.mp3",
         # One archive item per year: creating many new items looks like spam to the archive.
         "archive_item": f"{cfg['hosts']['archive']['item_prefix']}-{now.year}",
         "series": series,
@@ -114,11 +114,13 @@ def finalize(work):
     mins = stats["duration_seconds"] // 60
     notes = f"\n> **Notes from Claude:** {plan['notes']}\n" if plan["notes"] else ""
     site = cfg["site_url"].rstrip("/")
+    rel = SHOW_DIR.relative_to(ROOT).as_posix()
+    rel = f"{rel}/" if rel != "." else ""
     repo = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'JLC-source/FFDSP')}"
     branch = f"episode/{src['id']}"
-    art = (f"\n<img src=\"https://raw.githubusercontent.com/{repo.split('github.com/')[1]}/{branch}/site/episode-art/{plan['slug']}.jpg\" width=\"360\" alt=\"Episode artwork\">\n"
+    art = (f"\n<img src=\"https://raw.githubusercontent.com/{repo.split('github.com/')[1]}/{branch}/{rel}site/episode-art/{plan['slug']}.jpg\" width=\"360\" alt=\"Episode artwork\">\n"
            if plan.get("series") else "")
-    body = f"""## 🎧 New episode ready for your approval
+    body = f"""## 🎧 New {cfg['show']['title']} episode ready for your approval
 
 **{plan['title']}**
 {art}
@@ -129,8 +131,8 @@ def finalize(work):
 | ▶️ **Listen** | [{plan['audio_file']}]({audio_url}) |
 | Length | {mins} min |
 | Loudness | {stats['loudness_lufs']} LUFS (target −16) |
-| Original file | `{src['name']}` (moved to Drive “Done”) |
-| Transcript | [`transcripts/{plan['slug']}.txt`]({repo}/blob/episode/{src['id']}/transcripts/{plan['slug']}.txt) |
+| Original file | `{src['name']}` (moved to Drive “{cfg['drive']['done']}”) |
+| Transcript | [`transcripts/{plan['slug']}.txt`]({repo}/blob/episode/{src['id']}/{rel}transcripts/{plan['slug']}.txt) |
 
 ### What to do
 - ✅ **Approve:** tap **Merge pull request** → **Confirm merge**. It goes live at {site}/feed.xml within a few minutes.
@@ -139,7 +141,7 @@ def finalize(work):
   `@claude make the title "Mayim Rabim: Love That Water Can't Extinguish"` or
   `@claude shorten the description and mention it is from the 5738 maamar`.
 - ❌ **Reject:** tap **Close pull request**. Nothing is published. To redo it later,
-  move the original recording from Drive “Done” back to “Inbox”.
+  move the original recording from Drive “{cfg['drive']['done']}” back to “{cfg['drive']['inbox']}”.
 """
     (work / "pr_body.md").write_text(body)
     print(body)
