@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- "A dwelling place below" — a home whose open door pours light into the darkness -->
+  <defs>
+    <radialGradient id="tanya-33-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.6"/>
+      <stop offset="0.5" stop-color="#e3a43f" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tanya-33-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c58a3a"/>
+      <stop offset="1" stop-color="#7a4a1c"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9bf6a"/>
+      <stop offset="1" stop-color="#a96d27"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-door" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f0a432"/>
+      <stop offset="0.6" stop-color="#fbe3a0"/>
+      <stop offset="1" stop-color="#fff6dc"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-ray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbe3a0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#fbe3a0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c6597"/>
+      <stop offset="1" stop-color="#0f2744"/>
+    </linearGradient>
+    <linearGradient id="tanya-33-hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f4f7d"/>
+      <stop offset="1" stop-color="#0a1b31"/>
+    </linearGradient>
+  </defs>
+
+  <!-- warm halo -->
+  <circle cx="800" cy="560" r="520" fill="url(#tanya-33-glow)"/>
+  <circle cx="800" cy="560" r="340" fill="none" stroke="#d9b45a" stroke-opacity="0.25" stroke-width="3"/>
+  <circle cx="800" cy="560" r="430" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- light rays spreading from the door -->
+  <path d="M740 760 L 380 1200 L 620 1200 Z" fill="url(#tanya-33-ray)"/>
+  <path d="M800 760 L 700 1200 L 900 1200 Z" fill="url(#tanya-33-ray)"/>
+  <path d="M860 760 L 980 1200 L 1220 1200 Z" fill="url(#tanya-33-ray)"/>
+  <path d="M720 700 L 160 880 L 160 960 Z" fill="url(#tanya-33-ray)" opacity="0.6"/>
+  <path d="M880 700 L 1440 880 L 1440 960 Z" fill="url(#tanya-33-ray)" opacity="0.6"/>
+
+  <!-- stars -->
+  <g fill="#fbe3a0">
+    <circle cx="260" cy="180" r="5" opacity="0.8"/>
+    <circle cx="430" cy="290" r="3" opacity="0.6"/>
+    <circle cx="1180" cy="200" r="5" opacity="0.8"/>
+    <circle cx="1350" cy="330" r="3" opacity="0.6"/>
+    <circle cx="640" cy="130" r="3" opacity="0.6"/>
+    <circle cx="980" cy="110" r="4" opacity="0.7"/>
+  </g>
+
+  <!-- the house -->
+  <path d="M570 560 L 800 340 L 1030 560 Z" fill="url(#tanya-33-roof)"/>
+  <path d="M570 560 L 1030 560" stroke="#6b3f17" stroke-width="6"/>
+  <rect x="610" y="560" width="380" height="270" fill="url(#tanya-33-wall)"/>
+  <rect x="610" y="560" width="380" height="270" fill="none" stroke="#f0c871" stroke-opacity="0.5" stroke-width="3"/>
+
+  <!-- glowing door -->
+  <path d="M740 830 L 740 680 C 740 630, 860 630, 860 680 L 860 830 Z" fill="url(#tanya-33-door)"/>
+  <path d="M740 830 L 740 680 C 740 630, 860 630, 860 680 L 860 830 Z" fill="none" stroke="#fff0c2" stroke-width="4"/>
+
+  <!-- glowing windows -->
+  <rect x="650" y="620" width="56" height="70" rx="26" fill="#fbe3a0"/>
+  <rect x="894" y="620" width="56" height="70" rx="26" fill="#fbe3a0"/>
+
+  <!-- little flame above the roof -->
+  <path d="M800 210 C 830 260, 850 285, 845 315 C 842 340, 820 352, 800 352 C 780 352, 758 340, 755 315 C 752 290, 775 265, 784 245 C 790 262, 796 270, 804 274 C 800 255, 792 235, 800 210 Z" fill="#f0a432"/>
+  <path d="M800 270 C 818 300, 830 312, 827 328 C 825 340, 812 346, 800 346 C 788 346, 775 340, 773 328 C 771 314, 788 298, 800 270 Z" fill="#fff3cf"/>
+
+  <!-- dark hills in the foreground -->
+  <path d="M0 830 C 160 780, 300 790, 440 840 C 540 876, 600 850, 640 830 L 640 1200 L 0 1200 Z" fill="url(#tanya-33-hill1)"/>
+  <path d="M1600 830 C 1440 780, 1300 790, 1160 840 C 1060 876, 1000 850, 960 830 L 960 1200 L 1600 1200 Z" fill="url(#tanya-33-hill1)"/>
+  <path d="M0 960 C 200 910, 340 960, 520 1000 C 640 1026, 720 990, 800 990 C 880 990, 960 1026, 1080 1000 C 1260 960, 1400 910, 1600 960 L 1600 1200 L 0 1200 Z" fill="url(#tanya-33-hill2)" opacity="0.92"/>
+  <path d="M0 960 C 200 910, 340 960, 520 1000 C 640 1026, 720 990, 800 990 C 880 990, 960 1026, 1080 1000 C 1260 960, 1400 910, 1600 960" fill="none" stroke="#f0c871" stroke-opacity="0.35" stroke-width="3"/>
+</svg>
