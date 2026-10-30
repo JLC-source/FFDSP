@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- "Hashem is One" — a single radiant light filling every world, with joy rising from it -->
+  <defs>
+    <radialGradient id="tanya-33-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.6"/>
+      <stop offset="0.5" stop-color="#e3a43f" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tanya-33-sun" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.35" stop-color="#fbe3a0"/>
+      <stop offset="0.8" stop-color="#f0a432"/>
+      <stop offset="1" stop-color="#d9631f"/>
+    </radialGradient>
+    <linearGradient id="tanya-33-ray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f6c96b" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="tanya-33-orb" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#8fc3e6"/>
+      <stop offset="1" stop-color="#1f4f7d"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="800" cy="600" r="580" fill="url(#tanya-33-glow)"/>
+
+  <!-- rings: the worlds, upper and lower, all filled with the One -->
+  <circle cx="800" cy="600" r="250" fill="none" stroke="#d9b45a" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="800" cy="600" r="340" fill="none" stroke="#d9b45a" stroke-opacity="0.32" stroke-width="3"/>
+  <circle cx="800" cy="600" r="430" fill="none" stroke="#d9b45a" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="800" cy="600" r="520" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- rays -->
+  <g transform="translate(800 600)">
+    <g id="tanya-33-rays" fill="url(#tanya-33-ray)">
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(30)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(60)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(90)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(120)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(150)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(180)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(210)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(240)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(270)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(300)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(330)"/>
+    </g>
+  </g>
+
+  <!-- the central light -->
+  <circle cx="800" cy="600" r="150" fill="url(#tanya-33-sun)"/>
+  <circle cx="800" cy="600" r="150" fill="none" stroke="#fbe3a0" stroke-width="4" stroke-opacity="0.8"/>
+  <circle cx="800" cy="600" r="185" fill="none" stroke="#f6c96b" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- souls: small blue orbs on the rings, each lit by the same center -->
+  <g stroke="#f6c96b" stroke-opacity="0.35" stroke-width="2">
+    <line x1="800" y1="600" x2="800" y2="260"/>
+    <line x1="800" y1="600" x2="1094" y2="430"/>
+    <line x1="800" y1="600" x2="1094" y2="770"/>
+    <line x1="800" y1="600" x2="800" y2="940"/>
+    <line x1="800" y1="600" x2="506" y2="770"/>
+    <line x1="800" y1="600" x2="506" y2="430"/>
+  </g>
+  <g fill="url(#tanya-33-orb)" stroke="#f6c96b" stroke-width="3">
+    <circle cx="800" cy="260" r="34"/>
+    <circle cx="1094" cy="430" r="34"/>
+    <circle cx="1094" cy="770" r="34"/>
+    <circle cx="800" cy="940" r="34"/>
+    <circle cx="506" cy="770" r="34"/>
+    <circle cx="506" cy="430" r="34"/>
+  </g>
+  <g fill="#fff3cf" fill-opacity="0.85">
+    <circle cx="790" cy="250" r="9"/>
+    <circle cx="1084" cy="420" r="9"/>
+    <circle cx="1084" cy="760" r="9"/>
+    <circle cx="790" cy="930" r="9"/>
+    <circle cx="496" cy="760" r="9"/>
+    <circle cx="496" cy="420" r="9"/>
+  </g>
+
+  <!-- rising sparks of joy -->
+  <g fill="#fbe3a0">
+    <circle cx="620" cy="150" r="6" fill-opacity="0.8"/>
+    <circle cx="980" cy="120" r="5" fill-opacity="0.7"/>
+    <circle cx="1220" cy="260" r="4" fill-opacity="0.6"/>
+    <circle cx="380" cy="280" r="5" fill-opacity="0.6"/>
+    <circle cx="1260" cy="940" r="5" fill-opacity="0.5"/>
+    <circle cx="330" cy="950" r="4" fill-opacity="0.5"/>
+  </g>
+</svg>
