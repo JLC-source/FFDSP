@@ -1,0 +1,27 @@
+guid: 6916d703-e95a-467b-9c3b-8b3739a21d77
+title: The 13 Middot of Torah - part 1
+description: |-
+  Why does the Torah read like a storybook instead of a list of 613 mitzvot, and how do we know where to put a mezuzah or what counts as work on Shabbat? The class opens Rabbi Yishmael's thirteen rules for expounding the Torah that we say every morning, explaining why the Written Torah needs the Oral Torah to unlock it. We begin to learn the rules of general and specific, using the example of "do not covet."
+  Baraita of Rabbi Yishmael, Siddur
+pub_date: '2026-11-02T23:04:55Z'
+episode_type: full
+duration_seconds: 2982
+audio:
+  file: ffts-2026-11-02-the-13-middot-of-torah-part-1-c0b727e3.mp3
+  bytes: 23860078
+  type: audio/mpeg
+  archive_item: food-for-the-soul-2026
+transcript: transcripts/2026-11-02-the-13-middot-of-torah-part-1.srt
+source:
+  drive_file_id: 1qfxvUuUUwo08ESxf0EO42jjSNdgnpMcy
+  drive_file_name: 13 middot of tora.mp3
+  recorded: '2026-11-02T17:12:30.339Z'
+processing:
+  duration_seconds: 2982
+  loudness_lufs: -16.4
+  loudness_range_lu: 6.6
+  true_peak_dbfs: -1.9
+  original_loudness_lufs: -17.61
+series: 13-middot-of-torah
+part: 1
+image: episode-art/2026-11-02-the-13-middot-of-torah-part-1.jpg
