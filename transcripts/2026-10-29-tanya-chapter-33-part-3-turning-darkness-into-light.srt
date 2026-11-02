@@ -1,0 +1,1727 @@
+1
+00:00:00,080 --> 00:00:09,200
+Bokeh tov, good morning everyone, we are on the verge of finishing chapter 33 and we're doing
+
+2
+00:00:09,200 --> 00:00:10,200
+this happily.
+
+3
+00:00:10,200 --> 00:00:13,360
+Why are we doing this happily?
+
+4
+00:00:13,360 --> 00:00:14,360
+Because what?
+
+5
+00:00:14,360 --> 00:00:17,160
+Because we have the great merit to what?
+
+6
+00:00:17,160 --> 00:00:19,440
+To host Hashem in our presence.
+
+7
+00:00:19,440 --> 00:00:24,500
+Hashem is everywhere, Hashem is everything and everything is nullified compared to him.
+
+8
+00:00:24,500 --> 00:00:27,240
+So how great, how joyous is our portion?
+
+9
+00:00:27,240 --> 00:00:38,960
+How happy is our lot and how meritful is our heritage that we are Jewish, it's tremendous.
+
+10
+00:00:38,960 --> 00:00:41,040
+Why is it so tremendous?
+
+11
+00:00:41,040 --> 00:00:53,080
+Because you realize that if a physical individual of honor, a king, a wealthy man, a politician
+
+12
+00:00:53,080 --> 00:00:56,560
+would come and turn to you and say, I need you, I want you, I want to stay in your
+
+13
+00:00:56,560 --> 00:01:02,080
+house. How joyous would you be? How happy would you be with an opening at page 149 if you want?
+
+14
+00:01:03,440 --> 00:01:12,240
+How happy would you be? How much more so when the creator of the entire world turns to you and says,
+
+15
+00:01:12,240 --> 00:01:20,940
+I want you, I need you. And we describe that imagine someone who didn't work hard. And suddenly
+
+16
+00:01:20,940 --> 00:01:27,660
+he received a huge heritage. Someone passed away and he received a huge amount of money.
+
+17
+00:01:28,060 --> 00:01:40,230
+He's so happy but he's even more happy because he didn't come with his effort.
+
+18
+00:01:40,230 --> 00:01:47,390
+We are lucky that we are born into the faith and the imuna in one Creator.
+
+19
+00:01:47,390 --> 00:01:51,790
+Abraham wasn't born into it, if you read the part of these weeks.
+
+20
+00:01:51,790 --> 00:01:58,270
+Abraham was the one that discovered the shaman on his own, through his own question and
+
+21
+00:01:58,270 --> 00:02:07,170
+answers through his research, through his struggles. Once he did it, he paved the road for us, his
+
+22
+00:02:07,170 --> 00:02:37,150
+descendants to have faith in Hashem naturally, it becomes part of our DNA. And then we quoted one
+
+23
+00:02:37,150 --> 00:02:42,350
+of the twelve sukim. In general, there's going to be soon another one from the same
+
+24
+00:02:42,350 --> 00:02:48,830
+chapter that mentions the purpose of creation and the creation of all the
+
+25
+00:02:48,830 --> 00:02:53,670
+worlds, superior and inferior. What is the purpose of creation of all the
+
+26
+00:02:53,670 --> 00:03:00,050
+worlds? Or you'll have all if you don't know. What's the purpose of
+
+27
+00:03:00,050 --> 00:03:12,050
+creation of all the worlds, page 149, to create Hashem and abode here below. Aviva, what's
+
+28
+00:03:12,050 --> 00:03:20,290
+the purpose of creation? Very good to create Hashem, a dwelling place, an apartment, a home
+
+29
+00:03:20,290 --> 00:03:26,930
+down here. What does it mean a home? The choice of words when they say home, it's
+
+30
+00:03:26,930 --> 00:03:33,250
+a hotel. What's the difference between your house and a hotel? Let's say the hotel is bigger and nicer.
+
+31
+00:03:33,810 --> 00:03:41,650
+What's unique about your house? Because a house is a place where you can impress yourself like
+
+32
+00:03:41,650 --> 00:03:50,530
+for true, for true. A hotel is just a building. Or whatever. I'm saying home is more than just
+
+33
+00:03:50,530 --> 00:03:55,250
+a place. Home is a certain place where you could like, that's where you could be yourself
+
+34
+00:03:55,250 --> 00:04:00,050
+completely. That's why you could express yourself freely. Not always is that a good thing by everyone,
+
+35
+00:04:00,050 --> 00:04:06,050
+but let's say that like, this is the definition of home. You like, even as an adult, there's still
+
+36
+00:04:06,050 --> 00:04:11,810
+like, a certain aspect of like, going home to your parents. So that's where you grew up. That's
+
+37
+00:04:11,810 --> 00:04:20,210
+like where you, where we could express yourself fully, comfortably in every corner, every part
+
+38
+00:04:20,210 --> 00:04:25,730
+of the house is part of my house, especially a childhood home, every corner, even if it's like a
+
+39
+00:04:25,730 --> 00:04:33,890
+hook or like, every corner becomes part of the part of the story. When we say to create the
+
+40
+00:04:33,890 --> 00:04:39,570
+dwelling place for Hashem in this world, what we're trying to do, if you remember yesterday,
+
+41
+00:04:39,570 --> 00:04:45,890
+like we tried to like animate it a little, like everything is godly, our job is to basically
+
+42
+00:04:45,890 --> 00:04:51,690
+reveal it and let Hashem access it. So we give an example of the table that when we reveal
+
+43
+00:04:51,690 --> 00:04:56,490
+the real identity of the table it being a godly creation then we express the godliness
+
+44
+00:04:56,490 --> 00:05:01,590
+out of it. And if that would happen everywhere in the world then Hashem would be able to
+
+45
+00:05:01,590 --> 00:05:11,030
+express himself everywhere. You know that it says in the Talmud that Hashem cannot
+
+46
+00:05:11,030 --> 00:05:19,190
+well together with people that are egoistic, Baalei, Gava, full of themselves, stuck up.
+
+47
+00:05:21,590 --> 00:05:28,870
+Why? Because they're so full of themselves, there's no place for God. It's actually a
+
+48
+00:05:29,990 --> 00:05:34,630
+similar story. One time the Baalashemtov came to a synagogue of people who didn't follow the
+
+49
+00:05:34,630 --> 00:05:44,630
+Hasidic ways. And they invited him to come into the shul, and he said, the shul, I can go in,
+
+50
+00:05:44,630 --> 00:05:51,350
+the shul is full of prayers. It's stuffed full of prayers, I can't come in. So they were all
+
+51
+00:05:51,350 --> 00:05:59,590
+proud. Wow, what a special synagogue we have. It's filled all the way to the top with prayers.
+
+52
+00:05:59,590 --> 00:06:05,350
+The problem is that the prayers never went up, the prayer never went up to heaven, they
+
+53
+00:06:05,350 --> 00:06:07,270
+all stayed here.
+
+54
+00:06:07,270 --> 00:06:08,270
+Why so?
+
+55
+00:06:08,270 --> 00:06:13,630
+Whatever, I was talking to them about them being egoistic, praying for the wrong reasons,
+
+56
+00:06:13,630 --> 00:06:19,190
+trying to impress each other, being full of themselves and hurting each other whilst
+
+57
+00:06:19,190 --> 00:06:31,020
+they should be more focusing on avatisa, etc.
+
+58
+00:06:31,020 --> 00:06:35,260
+So now, what we are going to talk about today is an added value.
+
+59
+00:06:35,260 --> 00:06:43,140
+not just should you be happy, because Hashem chose you, and not just because He is present
+
+60
+00:06:43,140 --> 00:06:52,140
+in your presence, or you are in His presence, and that itself is a great, sufficient grounds
+
+61
+00:06:52,140 --> 00:06:58,380
+for you to rejoice, rather your transformation brings him pleasure.
+
+62
+00:06:58,380 --> 00:07:00,460
+Remember we mentioned the parrot?
+
+63
+00:07:00,460 --> 00:07:13,160
+We said that the parrot, the talking bird, remember we spoke about that, what was so
+
+64
+00:07:13,160 --> 00:07:20,200
+special about the parrot when you say good morning, that's not interesting.
+
+65
+00:07:20,200 --> 00:07:27,360
+If a parrot says good morning, it's like, oh wow, so cool, so far people pay fortune
+
+66
+00:07:27,360 --> 00:07:29,000
+to have a bird that could talk.
+
+67
+00:07:29,000 --> 00:07:39,420
+It was actually a classic Hasidic anecdote, but there was one time, there was a Jew who
+
+68
+00:07:39,420 --> 00:07:45,120
+was thrown to prison because he owed the king a lot of money, he owed the king a lot of
+
+69
+00:07:45,120 --> 00:07:51,940
+money so you know the community was trying to help, he didn't have anything, so there
+
+70
+00:07:51,940 --> 00:07:58,900
+was a bad sentence for him, a day later his wife sees him walking into the house.
+
+71
+00:07:58,900 --> 00:08:06,660
+how did you get free? So she sees he's holding a big dog. She's asking him what happened.
+
+72
+00:08:06,660 --> 00:08:11,300
+I said, look the following, they took me from the king to judge me and I realized I don't
+
+73
+00:08:11,300 --> 00:08:16,500
+have any other outlet. So I told the king, I knew that the king has a dog that he loves
+
+74
+00:08:16,500 --> 00:08:23,100
+very much. So I asked him, do you want me to teach your dog how to talk? He said,
+
+75
+00:08:23,100 --> 00:08:28,060
+you could really do that?" He said, yes. He said, really? If you do it? He said, yes, I just need
+
+76
+00:08:28,700 --> 00:08:34,540
+there, you need to, you know, I need a year exempt, you should forgive my loan and all the money,
+
+77
+00:08:34,540 --> 00:08:40,540
+and I need five years. Five years is a long process, but it's going to be worth it. The
+
+78
+00:08:40,540 --> 00:08:45,020
+king was so excited, gave him, forgave him for everything, gave him extra money and gave him
+
+79
+00:08:45,020 --> 00:08:51,340
+the dog. So, he tells him, you must sugar, you're crazy. The king is going to find out
+
+80
+00:08:51,340 --> 00:08:56,300
+that you scammed him and he's gonna shoot you. He says don't worry in five years either I'll die or
+
+81
+00:08:56,300 --> 00:09:02,700
+the king will die or the dog will die. Well so in five years you know we'll see what happens for
+
+82
+00:09:02,700 --> 00:09:26,710
+now we're good. Oh the novelty, the novelty of the talking bird that's gonna be the exciting
+
+83
+00:09:26,710 --> 00:09:38,870
+point. What's going to be exciting about you being a parrot is when we make a dwelling
+
+84
+00:09:38,870 --> 00:09:44,390
+place for Hashem down in this world, it's much more interesting than if we would create
+
+85
+00:09:44,390 --> 00:09:52,630
+a house amongst the angels. We said that the purpose of the Gershna of the world
+
+86
+00:09:52,630 --> 00:09:59,190
+to make Hashem a dwelling place down below here. Why down below here? Between us the angels
+
+87
+00:09:59,190 --> 00:10:04,510
+will do a much better job in serving Hashem. They praise Hashem unconditionally, they wake
+
+88
+00:10:04,510 --> 00:10:11,270
+up every morning on time, they don't come 15 minutes late, they're exactly every day
+
+89
+00:10:11,270 --> 00:10:17,550
+praising Hashem, He says something, they go and do it, no questions asked. But it's
+
+90
+00:10:17,550 --> 00:10:26,250
+It's not interesting, it's like a talking human, down below here in the concealed world
+
+91
+00:10:26,250 --> 00:10:32,050
+that was what Hashem desired, for there to be a disconnected world where he will be
+
+92
+00:10:32,050 --> 00:10:37,490
+able for us to express him, he will be able to derive pleasure from us expressing him
+
+93
+00:10:37,490 --> 00:10:52,320
+down here, and this is where we are going to see the two terms that are foundational
+
+94
+00:10:52,320 --> 00:10:58,320
+almost in chassidism that are called and I want you to take a pen and paper and I want
+
+95
+00:10:58,320 --> 00:11:01,400
+you to write those down so we're not going to have to repeat them every two weeks, every
+
+96
+00:11:01,400 --> 00:11:02,400
+week again.
+
+97
+00:11:02,400 --> 00:11:03,400
+Okay?
+
+98
+00:11:03,400 --> 00:11:05,400
+Everyone has pen and paper?
+
+99
+00:11:05,400 --> 00:11:10,720
+So you're going to remember if not then please take and students show up to class with
+
+100
+00:11:10,720 --> 00:11:11,720
+pen and paper.
+
+101
+00:11:11,720 --> 00:11:12,720
+Another what?
+
+102
+00:11:12,720 --> 00:11:17,720
+Another what?
+
+103
+00:11:17,720 --> 00:11:21,720
+Everyone is cold?
+
+104
+00:11:21,720 --> 00:11:23,720
+No.
+
+105
+00:11:23,720 --> 00:11:25,720
+We move room.
+
+106
+00:11:25,720 --> 00:11:26,720
+Yes.
+
+107
+00:11:26,720 --> 00:11:30,720
+And our electricity is put on.
+
+108
+00:11:30,720 --> 00:11:31,720
+Okay.
+
+109
+00:11:31,720 --> 00:11:32,720
+So it's not work.
+
+110
+00:11:32,720 --> 00:11:33,720
+So it's cold?
+
+111
+00:11:33,720 --> 00:11:35,720
+It was such a beautiful day outside.
+
+112
+00:11:35,720 --> 00:11:37,720
+Like phones.
+
+113
+00:11:37,720 --> 00:11:39,720
+Phones don't work?
+
+114
+00:11:39,720 --> 00:11:41,720
+It doesn't ring?
+
+115
+00:11:41,720 --> 00:11:50,720
+The alarm doesn't ring. And you have no friends? No. Okay, so we need volunteers for tomorrow
+
+116
+00:11:50,720 --> 00:12:03,030
+to wake up. Okay, number one, the word is sitra akhla, very good. Word number two,
+
+117
+00:12:03,030 --> 00:12:26,950
+eat kath ya. Word number three, eat haf haf. Yes. That's an F and that's a P.
+
+118
+00:12:26,950 --> 00:12:34,630
+Okay. Sitra achra. Let's start word by word. Who knows what sitra achra? Literally translated.
+
+119
+00:12:34,630 --> 00:12:49,910
+The other side is the side which is basically the definition or the terminology for the source
+
+120
+00:12:49,910 --> 00:12:55,190
+of God the energy for all the opposite of what Hashem desires.
+
+121
+00:12:55,190 --> 00:13:01,950
+This is what I desire and what I don't want.
+
+122
+00:13:01,950 --> 00:13:08,270
+the shem doesn't want, and that includes things that he's not against but he just doesn't
+
+123
+00:13:08,270 --> 00:13:13,190
+particularly want them, are called sitra achha, anything that is not holy.
+
+124
+00:13:13,190 --> 00:13:17,790
+And if you were with us last year in the tanya classes, I think we sharpened that
+
+125
+00:13:17,790 --> 00:13:24,190
+very clear, right, that there is holy and not holy.
+
+126
+00:13:24,190 --> 00:13:31,630
+There's no gray zone, everything that is not holy is what, unholy.
+
+127
+00:13:31,630 --> 00:13:40,750
+about this bag of sugar? Is this holy or not holy? Not holy. Not holy. Is it godly? So it's
+
+128
+00:13:40,750 --> 00:13:51,690
+anti-godly. Clear. But if you say... Never before the if. Let them, let them step by step. This is
+
+129
+00:13:51,690 --> 00:13:59,050
+godly. Do I see godliness when I look at this? So it's concealing Hashem, right? It's hiding
+
+130
+00:13:59,050 --> 00:14:09,220
+God? Or is it revealing God? Hiding God, right? So it's anti-Godly. What about this? I don't know,
+
+131
+00:14:09,220 --> 00:14:15,700
+it's a shlokhah conference on it. I'm not sure if it's completely concealing Hashem, but I see
+
+132
+00:14:15,700 --> 00:14:21,140
+here what? An independent entity that thinks itself for being disconnected from God, right?
+
+133
+00:14:22,660 --> 00:14:27,460
+If I'm going to ask the pen, who are you? What do you mean I'm a pen? Who made you? I don't
+
+134
+00:14:27,460 --> 00:14:36,020
+you know, I don't care, I'm a pen, I'm my own thing, right? So does this reveal Hashem
+
+135
+00:14:36,020 --> 00:14:49,400
+or hide Hashem? So it's Altay Godly. What about the Book of Tanya? That's holy. Why?
+
+136
+00:14:49,400 --> 00:14:55,560
+Because you manage to transform the paper or the ink into something holy. So when
+
+137
+00:14:55,560 --> 00:15:03,720
+Can I look at this? Does this reveal Hashem? Yes. And this? Conceals Hashem. Anything that
+
+138
+00:15:03,720 --> 00:15:11,540
+doesn't, the table is godly or anti-godly? Right, as of now it's anti-godly, until
+
+139
+00:15:11,540 --> 00:15:17,400
+otherwise proven. By definition, anything that Hashem did not desire and create with
+
+140
+00:15:17,400 --> 00:15:23,200
+the purpose or with the holy, with the holy expression, which is very minor percentage
+
+141
+00:15:23,200 --> 00:15:31,520
+of the world, that is kudusha, holiness. Then there is sitra'acha, which is 99.9% of the
+
+142
+00:15:31,520 --> 00:15:42,120
+universe. Things that are anti-godly because they hide Hashem from our presence. Don't worry,
+
+143
+00:15:42,120 --> 00:15:47,720
+some of it will be transformable, it doesn't mean it's necessarily bad, it's just reality.
+
+144
+00:15:48,760 --> 00:15:52,840
+A person needing to eat or sleep or go to the bathroom is not something bad,
+
+145
+00:15:52,840 --> 00:15:59,200
+Is that something we want to do? How many people would be able to wish not needing to spend time on sleeping?
+
+146
+00:16:01,390 --> 00:16:04,050
+That's something bad. Everyone wants to love sleeping?
+
+147
+00:16:05,090 --> 00:16:07,850
+No. What do you mean? Who likes sleeping?
+
+148
+00:16:08,610 --> 00:16:10,610
+Such a waste of time.
+
+149
+00:16:10,730 --> 00:16:17,410
+It's it's so when you're tired, you want to sleep but imagine a life where you don't need to sleep all together.
+
+150
+00:16:17,410 --> 00:16:37,090
+Amazing. Imagine you have 24 hours to learn Torah. So it's not bad. It's just anti. It's
+
+151
+00:16:37,090 --> 00:16:43,050
+something else. It's not what we're on. So in a certain way it is bad. But like, we'll
+
+152
+00:16:43,050 --> 00:16:49,830
+see that it's transformable. So sitra achra, we have clear. Now the next word. It's
+
+153
+00:16:49,830 --> 00:17:00,340
+called Itkafya. Itkafya comes from the Hebrew word lekofef, to bend. To bend, when I can't
+
+154
+00:17:00,340 --> 00:17:09,100
+break something, I could at least push it away, I could bend it, I could move it out
+
+155
+00:17:09,100 --> 00:17:14,220
+of the way. Let's say there's a lot of tall grass and I want to go through, I can't
+
+156
+00:17:14,220 --> 00:17:19,020
+break it, I can't do it. I could move it to the sides so I could pass through,
+
+157
+00:17:19,020 --> 00:17:25,900
+I could bend it, I could push it off, right, push it away, eat kafia comes from the word
+
+158
+00:17:25,900 --> 00:17:33,240
+like a fifth, to bend, to push off, what does this look like, imagine I really want
+
+159
+00:17:33,240 --> 00:17:38,460
+to eat something not kosher or to eat something animalistic for an unholy purpose, just
+
+160
+00:17:38,460 --> 00:17:43,740
+because I'm in the mood of sushi, so I really want to eat sushi, so my animal soul tells
+
+161
+00:17:43,740 --> 00:17:49,320
+my godly soul, go eat sushi or go make yourself a coffee before you come to class and you're
+
+162
+00:17:49,320 --> 00:17:54,440
+going to be late for class because you're making a coffee, maybe that comes from the godly
+
+163
+00:17:54,440 --> 00:17:56,960
+soul, we could argue.
+
+164
+00:17:56,960 --> 00:18:05,560
+So the godly soul wants to express itself, the animal soul is rejecting it and wants
+
+165
+00:18:05,560 --> 00:18:11,760
+to do something else, so we have a great strategy, it's called pushing off.
+
+166
+00:18:11,760 --> 00:18:12,760
+What are we doing?
+
+167
+00:18:12,760 --> 00:18:17,080
+We're saying, not now, in half an hour.
+
+168
+00:18:17,080 --> 00:18:18,680
+I'll go eat sushi, I'll go make a coffee,
+
+169
+00:18:18,680 --> 00:18:22,040
+I'll go watch the movie, not now, in half an hour.
+
+170
+00:18:24,120 --> 00:18:25,200
+So who's the boss?
+
+171
+00:18:28,920 --> 00:18:29,760
+The mishallah?
+
+172
+00:18:31,200 --> 00:18:34,340
+In a certain way, in that little pushing off,
+
+173
+00:18:34,340 --> 00:18:35,800
+you show who the boss is.
+
+174
+00:18:37,140 --> 00:18:40,300
+You're lost, because ultimately you'll go do that,
+
+175
+00:18:40,300 --> 00:18:43,720
+or eat that, or whatever you're doing wrong.
+
+176
+00:18:43,720 --> 00:18:50,440
+but you showed, hey, you're not the only boss here, I'm also the boss. I also say what's
+
+177
+00:18:50,440 --> 00:18:55,560
+going on over here. And that creates, that is one of the things that reveals Hashem most in this
+
+178
+00:18:55,560 --> 00:19:03,560
+world, because you're showing the world and nature that they're not the only one control here.
+
+179
+00:19:03,560 --> 00:19:07,160
+That there's another divine power that will tell you what's right and what's wrong here.
+
+180
+00:19:08,440 --> 00:19:13,560
+So it's not, you could be proud of yourself if you pushed off your coffee by half hour.
+
+181
+00:19:13,720 --> 00:19:20,200
+Or your sushi by half hour or whatever movie you wanted to watch because you show that you're like
+
+182
+00:19:21,400 --> 00:19:27,440
+They're in control any desire you want to say the show now and you push it off by a little
+
+183
+00:19:28,320 --> 00:19:35,370
+It's helpful step one. It has a great addition. It's cool. It's helpful. It's kafia
+
+184
+00:19:37,310 --> 00:19:39,310
+Question
+
+185
+00:19:39,310 --> 00:19:41,470
+So eat kafia, okay
+
+186
+00:19:41,470 --> 00:19:46,910
+I don't want to repeat this again like many times made tomorrow we'll do a short not tomorrow next week
+
+187
+00:19:46,910 --> 00:19:53,630
+We'll like mention this again, but like it should get start getting engraved in your minds. Okay, sitra ahra. We know
+
+188
+00:19:54,190 --> 00:19:56,190
+Trek it kaffia
+
+189
+00:19:57,670 --> 00:19:59,670
+Trek eat habra
+
+190
+00:20:00,270 --> 00:20:03,150
+Eat habra is the second strategy
+
+191
+00:20:03,710 --> 00:20:08,990
+Which is almost like step two not necessarily step two. It's transformation
+
+192
+00:20:08,990 --> 00:20:17,040
+You know what's the Na'afochu?
+
+193
+00:20:17,040 --> 00:20:19,040
+You know what's the Na'afochu Purim?
+
+194
+00:20:19,040 --> 00:20:21,040
+HaFuch?
+
+195
+00:20:21,040 --> 00:20:23,040
+What's HaFuch?
+
+196
+00:20:23,040 --> 00:20:25,040
+What?
+
+197
+00:20:25,040 --> 00:20:27,040
+No, HaFuch is not parties.
+
+198
+00:20:27,040 --> 00:20:29,040
+How do you say HaFuch?
+
+199
+00:20:29,040 --> 00:20:32,480
+What's the Na'afochu?
+
+200
+00:20:32,480 --> 00:20:34,480
+Change.
+
+201
+00:20:34,480 --> 00:20:38,480
+It's basically upside down.
+
+202
+00:20:38,480 --> 00:20:40,480
+Na'afoch.
+
+203
+00:20:40,480 --> 00:20:48,160
+naafoch, to make the opposite. I call it transformation just because it's simpler.
+
+204
+00:20:50,500 --> 00:20:54,620
+Itapra, what does it mean? I can explain more, it's good?
+
+205
+00:20:56,380 --> 00:21:01,340
+It's basically, what does it mean? When I wake up and I have a strong desire to,
+
+206
+00:21:03,500 --> 00:21:08,300
+let's say I'm bored and I will decide to, okay, let me check Instagram.
+
+207
+00:21:08,300 --> 00:21:16,420
+Okay, so I have a strong desire to open my phone and check Instagram. Where is this desire
+
+208
+00:21:16,420 --> 00:21:21,700
+coming from from the Goldie solar for the from the animal soul from the animal soul?
+
+209
+00:21:21,700 --> 00:21:28,580
+Okay, at least we don't argue disagree on this one. So, oh, oh, we're getting we're
+
+210
+00:21:28,580 --> 00:21:35,660
+getting to the point. So, if you want to check the rubber videos, go on gem.org.
+
+211
+00:21:35,660 --> 00:21:40,300
+You know, it's important if you anyway watch Instagram, at least there's going to be a
+
+212
+00:21:40,300 --> 00:21:45,700
+rubber video there, but you don't go on Instagram to watch rubber videos, don't fool yourself.
+
+213
+00:21:45,700 --> 00:21:52,140
+What are we saying? We're saying you could transform it. What does it mean? I have an
+
+214
+00:21:52,140 --> 00:21:57,940
+desire. I want it. I want to do something. What could I do? I'm going to channel this
+
+215
+00:21:57,940 --> 00:22:07,500
+energy to something holy. Instead of watching this, I'll open a short around video. Why
+
+216
+00:22:07,500 --> 00:22:14,780
+that transformative because I use the energy that I desire to do something negative for
+
+217
+00:22:14,780 --> 00:22:20,820
+something positive. Imagine I'm very angry at someone instead of punching him I'm giving
+
+218
+00:22:20,820 --> 00:22:30,650
+him a hug. It's not just postponing the punch. I want to punch you all wait a little later
+
+219
+00:22:30,650 --> 00:22:37,250
+whether I use the same energy and desire that I have to do the exact opposite and
+
+220
+00:22:37,250 --> 00:22:46,690
+uses for something holy. There's two ways, there's not going to Times Square, that's
+
+221
+00:22:46,690 --> 00:22:53,090
+it kafia, you're pushing yourself not to go there. And then there's itabcha, when
+
+222
+00:22:53,090 --> 00:22:58,170
+Chabad makes a menorah lighting or sitting in Shabbaton and Abdullah, in Times Square
+
+223
+00:22:58,170 --> 00:23:07,770
+what is that? Itabcha, the same screen that could show shtos, could show godliness,
+
+224
+00:23:07,770 --> 00:23:13,050
+is transformation. The same sushi that could have been an animalistic desire could now be
+
+225
+00:23:13,050 --> 00:23:24,940
+part of a Shia Torah. You need to be careful not to fool yourself. But this is a joke story.
+
+226
+00:23:24,940 --> 00:23:31,260
+I know there are two Shiva students learning Torah together. And one started smoking. So
+
+227
+00:23:31,260 --> 00:23:36,140
+his friend told him, hey, during study, it's not appropriate to smoke. What do you mean?
+
+228
+00:23:36,140 --> 00:23:40,780
+no problem they said okay let's go ask the rabbi they went to the rabbi and the one friend said
+
+229
+00:23:40,780 --> 00:23:45,660
+rabbi while we study together in the synagogue i will uh is it okay to smoke he said no not
+
+230
+00:23:45,660 --> 00:23:50,540
+appropriate so he's friend told no no you asked wrong he says rabbi while i'm smoking could i study
+
+231
+00:23:50,540 --> 00:23:58,940
+Torah so it's it's many times about the framing you know it's not like while i'm on instagram
+
+232
+00:23:58,940 --> 00:24:03,340
+can i watch a rubber video or if i'm gonna watch a rubber video on instagram it's like
+
+233
+00:24:03,340 --> 00:24:08,410
+Be careful, what are we doing?
+
+234
+00:24:08,410 --> 00:24:15,650
+So, let's open the tanya inside, we are going to see that the joy is not just from the
+
+235
+00:24:15,650 --> 00:24:24,130
+godly presence here, rather through the itkafya and ithabcha that we do to the sitra akha,
+
+236
+00:24:24,130 --> 00:24:29,770
+the transformation and push-off that we do to the other side, this is what creates
+
+237
+00:24:29,770 --> 00:24:34,490
+what brings light to the world. This is in a certain way the purpose of all creation.
+
+238
+00:24:35,050 --> 00:24:43,130
+This is what brings tremendous additional light to the world. Every time a Jew postpones the
+
+239
+00:24:43,130 --> 00:24:49,370
+Sitarah even by a bit. You know, it's so interesting. Many times we see the Holocaust
+
+240
+00:24:49,370 --> 00:24:56,490
+stories or stories from the Roman Empire. When you see a Jewish kid saying no to
+
+241
+00:24:56,490 --> 00:25:04,410
+to a Roman emperor that told him to bend down to, you know, Hanay and her sons, five-year-old
+
+242
+00:25:04,410 --> 00:25:05,410
+baby.
+
+243
+00:25:05,410 --> 00:25:11,910
+The king told them, bend to the idol, and he says, no.
+
+244
+00:25:11,910 --> 00:25:12,910
+What happened here?
+
+245
+00:25:12,910 --> 00:25:19,580
+You see, whatever the kid didn't bend, he didn't listen, the king killed him.
+
+246
+00:25:19,580 --> 00:25:27,940
+In the greater picture, the little boy, by not bending down, transformed and showed
+
+247
+00:25:27,940 --> 00:25:40,020
+the entire world, who's the boss? And ask all the terrorist organizations. This doesn't
+
+248
+00:25:40,020 --> 00:25:58,700
+sound good. Any revolutionaries, freedom fighters, ask them, any little rebelling
+
+249
+00:25:58,700 --> 00:26:06,700
+you a winner. By the way it's interesting if you learn some Islam you'll realize that by them winning
+
+250
+00:26:07,660 --> 00:26:15,900
+is not who killed more or who destroyed the other one more. It's who gave the last punch
+
+251
+00:26:19,280 --> 00:26:22,960
+which kind of like makes sense why this war with Arabs is endless
+
+252
+00:26:24,160 --> 00:26:28,560
+because they don't care if everyone there dies as long as they threw the last bomb.
+
+253
+00:26:30,080 --> 00:26:36,240
+As long as they through the last bullet, they in their mind are the winners and in a certain
+
+254
+00:26:36,240 --> 00:26:42,440
+way they're right, because as long as one man is still standing and he's still able to
+
+255
+00:26:42,440 --> 00:26:50,920
+fight back or even just to ping you, you know, sometimes you're throwing stones like
+
+256
+00:26:50,920 --> 00:27:00,430
+we have an army, they want, because they show that who's the boss, they, not the
+
+257
+00:27:00,430 --> 00:27:05,930
+full boss, not half a boss, eventually there will be the boss, chasve shalom, you can do
+
+258
+00:27:05,930 --> 00:27:16,220
+the same thing, it's okay, this is me, this is who I am, this is what I do.
+
+259
+00:27:16,220 --> 00:27:42,470
+Ozzot, page 151, in the bottom of the first column.
+
+260
+00:27:42,470 --> 00:27:45,990
+This is the meaning of the words, shall live by his faith.
+
+261
+00:27:45,990 --> 00:27:52,990
+He said that all the mitzvot are great, there is one mitzvah that is the base of all of it
+
+262
+00:27:52,990 --> 00:27:57,230
+is to live with faith, with emunah.
+
+263
+00:27:57,230 --> 00:28:02,070
+Of course not with emunah, isn't that like the foundation of being Jewish to believe
+
+264
+00:28:02,070 --> 00:28:03,070
+in one God?
+
+265
+00:28:03,070 --> 00:28:06,030
+So saying, what does it mean to live by faith?
+
+266
+00:28:06,030 --> 00:28:12,510
+With the emphasis on shall live as the resurrection of the dead, by way of example.
+
+267
+00:28:12,510 --> 00:28:15,950
+So will his soul revive with this great joy.
+
+268
+00:28:15,950 --> 00:28:23,710
+when you understand that believing is not just, oh there is a God, rather God in the world
+
+269
+00:28:23,710 --> 00:28:32,900
+are one, the joy you all have is going to be a transformative, reviving joy.
+
+270
+00:28:32,900 --> 00:28:33,900
+What am I saying?
+
+271
+00:28:33,900 --> 00:28:41,580
+You know, there was once a not-khabad person who came to khabadra and told the rabbi,
+
+272
+00:28:41,580 --> 00:28:45,060
+I don't believe in God, I don't believe God exists.
+
+273
+00:28:45,060 --> 00:28:52,410
+told him, the God that you think is God, he really doesn't exist. Whoever you think is
+
+274
+00:28:52,410 --> 00:28:59,270
+God really does, is wrong. That really doesn't exist. There's no surprise that many people
+
+275
+00:28:59,270 --> 00:29:04,770
+struggle with belief that there's an external power that controls and says what to happen
+
+276
+00:29:04,770 --> 00:29:09,670
+in the world. You know, like when they make God in movies, you know, like an old man
+
+277
+00:29:09,670 --> 00:29:15,010
+in like between the clouds that look at such strange things here on earth with a long
+
+278
+00:29:15,010 --> 00:29:19,930
+white beard like Dumbledore, you know, like, it's not like it's like this is
+
+279
+00:29:19,930 --> 00:29:23,090
+completely wrong. This is really, what?
+
+280
+00:29:23,090 --> 00:29:27,490
+Now there is something new, God in the white, white suit.
+
+281
+00:29:27,490 --> 00:29:33,050
+Oh, yeah, whatever. Sometimes he's African American, sometimes he doesn't make a difference.
+
+282
+00:29:33,050 --> 00:29:40,610
+There's a lot of different versions of it. That really is nonsense, because that
+
+283
+00:29:40,610 --> 00:29:45,890
+That means that there are multiple entities, this God and the world, that's the biggest
+
+284
+00:29:45,890 --> 00:29:48,610
+this unity that you could create.
+
+285
+00:29:48,610 --> 00:29:53,930
+Hashem אחד, Shema Yisrael, Hashem Elohim, Hashem אחד means God is one, not that it
+
+286
+00:29:53,930 --> 00:29:56,570
+is one God and not two and not three.
+
+287
+00:29:56,570 --> 00:30:00,570
+It means that one God, Him and the world are one.
+
+288
+00:30:00,570 --> 00:30:04,890
+That's the real unity, that there is nothing but Him, there is no Him and me and He
+
+289
+00:30:04,890 --> 00:30:06,610
+tells me what to do.
+
+290
+00:30:06,610 --> 00:30:13,890
+It's one of the six to be elaborated on but when we get this part that should bring us such a joy
+
+291
+00:30:16,370 --> 00:30:18,610
+Like like complete like completely new
+
+292
+00:30:19,010 --> 00:30:26,430
+Now the part that we want to continue from today is on the third row or the second column. This is a doubled and redoubled joy
+
+293
+00:30:27,450 --> 00:30:28,970
+Okay
+
+294
+00:30:28,970 --> 00:30:31,490
+This is a double and redoubled joy
+
+295
+00:30:31,490 --> 00:30:38,770
+for apart from the joy of the soul apprehending the nearness of God and his dwelling with
+
+296
+00:30:38,770 --> 00:30:39,770
+him.
+
+297
+00:30:39,770 --> 00:30:44,810
+That's number one that we spoke yesterday and a little bit today.
+
+298
+00:30:44,810 --> 00:30:50,130
+There's number two, the next joy where it's additional, he will doubly rejoice with the
+
+299
+00:30:50,130 --> 00:30:58,810
+joy of the Lord and his tremendous gratification rendered to him by virtue of his faith,
+
+300
+00:30:58,810 --> 00:31:07,130
+by the sitra akha is verily subdued, and darkness is changed into light, or in other words,
+
+301
+00:31:07,130 --> 00:31:15,490
+itkafya and itapha of the sitra akha, you see it inside, that the sitra akha is subdued,
+
+302
+00:31:15,490 --> 00:31:19,090
+what's subdued when it's verily subdued?
+
+303
+00:31:19,090 --> 00:31:36,980
+Itkafya, subdued, to push up, to push down. To push down, that's Itkafya. And darkness
+
+304
+00:31:36,980 --> 00:31:46,390
+changing to light, what is that? Ithabcha la fochna, exactly to transform. So the joy
+
+305
+00:31:46,390 --> 00:31:54,490
+that comes to this, i.e. that is the darkness of the kilipot of this corporeal world which
+
+306
+00:31:54,490 --> 00:32:00,230
+of scroll and conceal has a blessed light until the end, as is written, He sent us an end
+
+307
+00:32:00,230 --> 00:32:10,420
+to darkness, when will there be an end to darkness, when will Hashem be revealed in this world,
+
+308
+00:32:10,420 --> 00:32:16,820
+when is that going to happen? When Mashiach comes, Hashem didn't let the world be endlessly
+
+309
+00:32:16,820 --> 00:32:22,400
+dark and disconnected, rather temporarily. Let's see in parentheses here, which refers
+
+310
+00:32:22,400 --> 00:32:26,920
+to the end of the days when the spurt of impurity will be banished from earth and the glory of
+
+311
+00:32:26,920 --> 00:32:32,760
+the Lord will be revealed and all flesh shall see together as will be explained later.
+
+312
+00:32:32,760 --> 00:32:39,000
+Us seeing Godliness and our body living with God is not such a crazy concept because it's
+
+313
+00:32:39,000 --> 00:32:40,840
+already like this right now.
+
+314
+00:32:40,840 --> 00:32:46,000
+Right now there's just an obstruction from seeing it.
+
+315
+00:32:46,000 --> 00:32:58,460
+If our eyes could see or be a little less materialistic we will be able to see Godliness
+
+316
+00:32:58,460 --> 00:33:04,380
+in everything. Right now we could a little bit, how? If we use our brains, right? If you meditate a
+
+317
+00:33:04,380 --> 00:33:09,660
+little bit and you close your eyes and you think about God reviving this table. If you'll do this
+
+318
+00:33:09,660 --> 00:33:16,590
+long and strong enough, eventually you'll start seeing Godliness in everything. I'm not saying
+
+319
+00:33:16,590 --> 00:33:21,070
+it's like not like close your eyes and do a 30-second. I'm talking about Hasidim. For years
+
+320
+00:33:21,950 --> 00:33:27,630
+they joked that the tables in 770 are nonexistent. Why? Because for years,
+
+321
+00:33:27,630 --> 00:33:33,550
+as a Shiva student, sit there and think about how the tables are nullified in God's presence and how
+
+322
+00:33:33,550 --> 00:33:39,150
+they're really... because that's the item always rabbis use as a simple example. It's like this table.
+
+323
+00:33:40,030 --> 00:33:45,550
+So the meditation is about this table being nullified in the Godly presence. If God really
+
+324
+00:33:45,550 --> 00:33:51,070
+creates the space and the materia and creates this at this moment, the table is just saying,
+
+325
+00:33:51,070 --> 00:33:57,230
+saying, hey, my job is to hide God from you. So we are going to tell them, hey, we know
+
+326
+00:33:57,230 --> 00:34:03,110
+the secret, we know the truth. And if we keep doing that, we will start seeing this
+
+327
+00:34:03,110 --> 00:34:11,510
+and everything. Talking about Avraham, one of the Midrashim tells us that when Avraham
+
+328
+00:34:11,510 --> 00:34:16,790
+wanted to go sacrifice its chak, there was a big river on the way, huge river,
+
+329
+00:34:16,790 --> 00:34:20,330
+Right, and there was no way to go around it in order to get to the mountain
+
+330
+00:34:21,050 --> 00:34:25,190
+What do Abraham do?
+
+331
+00:34:25,190 --> 00:34:27,190
+You know this Midrash?
+
+332
+00:34:27,830 --> 00:34:32,750
+What do we do in the Bible when we see a river that we can't cross?
+
+333
+00:34:34,830 --> 00:34:38,510
+Yeah, yeah, we just walk in but there it's a little bit of a different story
+
+334
+00:34:38,910 --> 00:34:44,950
+Abraham starts walking in walking in against the water higher when the water gets to the max the river disappeared
+
+335
+00:34:44,950 --> 00:34:59,940
+Why so? That kind of explains that the Satan equals Sidraachah equals Yetzirah, Satan saw that Abraham is on the way to account with such a great mission.
+
+336
+00:34:59,940 --> 00:35:12,820
+He put the river there. Now Abraham knew that if Hashem told me to get from point A to point B, and the only way to go from point A to point B is what?
+
+337
+00:35:12,820 --> 00:35:22,500
+through the river, so they cannot be a real obstacle in the way from me to get them.
+
+338
+00:35:22,500 --> 00:35:31,060
+Hashem didn't say, go there unless there is a river. Right? What did Hashem say?
+
+339
+00:35:31,060 --> 00:35:36,220
+Get from here to there. By the way, that was Naqshon Ben Aminadaz's theory also when he
+
+340
+00:35:36,220 --> 00:35:42,060
+jumped into the water. Who gave Naqshon the right to commit suicide? He says,
+
+341
+00:35:42,060 --> 00:35:48,260
+no suicide. God never told us to stop. God told us to go. You know the story about the
+
+342
+00:35:48,260 --> 00:35:53,670
+Japanese soldier? I don't know exactly the details.
+
+343
+00:35:53,670 --> 00:36:01,070
+He stayed in the world for 30 years. I think like now, after the world war, there was still
+
+344
+00:36:01,070 --> 00:36:06,950
+Japanese soldiers. It was a Japanese troop that were like in charge of an island. And
+
+345
+00:36:06,950 --> 00:36:12,870
+he lost all his other soldiers. He was left alone. And his responsibility was to guard,
+
+346
+00:36:12,870 --> 00:36:23,950
+attacked a certain area. So, they found, I think the war was over 1948? When was the
+
+347
+00:36:23,950 --> 00:36:30,550
+world officially over? No, even later. No, 1945 was in Germany. Japan continued, Japan,
+
+348
+00:36:30,550 --> 00:36:39,830
+America continued fighting for 20 years. What? For one more year? Long story short, long
+
+349
+00:36:39,830 --> 00:36:46,070
+story short you continued fighting and he was like in the woods for 20 or 30 years until they
+
+350
+00:36:46,070 --> 00:36:52,230
+found him and told him you know like the war is over so I don't know my my official my my my
+
+351
+00:36:52,230 --> 00:36:58,150
+commander never told me to stop till he got that the chief to tell him it's over you could stop
+
+352
+00:36:59,190 --> 00:37:02,550
+but until you got that command you have no right to stop.
+
+353
+00:37:02,550 --> 00:37:09,350
+I mean I've said the same, God told us to get the Mount Sinai. He didn't tell us to like stop,
+
+354
+00:37:09,350 --> 00:37:18,910
+tell us to walk. So look and then what what comes out comes out that the river was just an obstacle
+
+355
+00:37:18,910 --> 00:37:25,430
+created to create an illusion that there's something stopping you. Remember the prostitute
+
+356
+00:37:25,430 --> 00:37:31,650
+story? How come we don't remember the story? This is like we are repeating like
+
+357
+00:37:31,650 --> 00:37:43,700
+Remember the story? With the harlot? The one that the king hired her to seduce his son?
+
+358
+00:37:43,700 --> 00:37:54,100
+Remember the story? Now you remember the story? What did she want for the king's son to fail
+
+359
+00:37:54,100 --> 00:38:03,420
+or to not? To be with her, not to be with her. Not to be with her. So really if the son of the
+
+360
+00:38:03,420 --> 00:38:10,300
+king will know that everyone in this country is just almost attached like I'm in charge and my
+
+361
+00:38:10,300 --> 00:38:17,100
+father is in charge so she's trying to seduce me she has no right to do that unless the king kind
+
+362
+00:38:17,100 --> 00:38:23,020
+of gives her permission to do that and if you would know this the obstacle will be much easier
+
+363
+00:38:24,220 --> 00:38:32,300
+if you would know that really remember that was my Rabin linking back to the great waters
+
+364
+00:38:32,300 --> 00:38:42,000
+or you forgot about that completely. The Great Waters, remember that? It was a week
+
+365
+00:38:42,000 --> 00:38:51,180
+ago already, but like I know it's been a lot happened since. So, who gives the
+
+366
+00:38:51,180 --> 00:38:57,780
+world the right to fight against the Jew? It's the same Hashem that gives it
+
+367
+00:38:57,780 --> 00:39:01,960
+the power and the tremendous power to fight against you. But if you know that
+
+368
+00:39:01,960 --> 00:39:08,680
+Hashem is the one who gives the power to tiktok, to distract you, and you know that you're
+
+369
+00:39:08,680 --> 00:39:17,060
+a superior to that, so you look straight through it and you're able to transform.
+
+370
+00:39:17,060 --> 00:39:26,620
+So now let's see why that could create you even double joy, particularly in the diaspora.
+
+371
+00:39:26,620 --> 00:39:31,420
+Let's see here particularly in the diaspora, page 151 towards the end of the second
+
+372
+00:39:31,420 --> 00:39:38,700
+calling, particularly in the diaspora, where the atmosphere is unclean and filled with
+
+373
+00:39:38,700 --> 00:39:43,380
+khalipot and sitracha, especially outside of Israel. That's where the transformation
+
+374
+00:39:43,380 --> 00:39:50,220
+is extra extra special. That's not like a talking bird, that's like a talking horse.
+
+375
+00:39:50,220 --> 00:39:57,660
+That's like, not the bird talking kind of makes sense, a horse talking, that's
+
+376
+00:39:57,660 --> 00:40:03,820
+extra accent like it's always like doing doing doing it coffee and it up and Israel it's one
+
+377
+00:40:04,380 --> 00:40:10,220
+doing it in the in the diaspora or it calls us to refer just to the time of exile not necessarily
+
+378
+00:40:10,220 --> 00:40:15,740
+the land of Israel or not for there's no joy before him blessed be he like the light and joy
+
+379
+00:40:15,740 --> 00:40:19,980
+of the particular excellence of the light that comes out of darkness this is the meaning
+
+380
+00:40:19,980 --> 00:40:26,860
+of the verse let Israel rejoice in his maker ismach israel be osav do you know this
+
+381
+00:40:26,860 --> 00:40:36,460
+Pasuk, Perush, Shekol, Mi Shehu. Does this sound familiar? Mi Zehra. You don't know this?
+
+382
+00:40:36,460 --> 00:40:43,180
+You never participated in the 12 Psukim Rally? When the kids say the 12 Psukim, right?
+
+383
+00:40:43,180 --> 00:40:44,180
+Yes.
+
+384
+00:40:44,180 --> 00:40:45,180
+Yes.
+
+385
+00:40:45,180 --> 00:40:46,180
+Yish.
+
+386
+00:40:46,180 --> 00:40:47,180
+Yish.
+
+387
+00:40:47,180 --> 00:40:48,180
+Yish.
+
+388
+00:40:48,180 --> 00:40:49,180
+Yish.
+
+389
+00:40:49,180 --> 00:40:50,180
+Yish.
+
+390
+00:40:50,180 --> 00:40:51,180
+Yish.
+
+391
+00:40:51,180 --> 00:40:52,180
+Yish.
+
+392
+00:40:52,180 --> 00:40:53,180
+Yish.
+
+393
+00:40:53,180 --> 00:40:54,180
+Yish.
+
+394
+00:40:54,180 --> 00:40:55,180
+Yish.
+
+395
+00:40:55,180 --> 00:41:00,380
+Listen to this, if you're ever depressed, I'll tell you you have no right to be depressed,
+
+396
+00:41:00,380 --> 00:41:01,380
+why?
+
+397
+00:41:01,380 --> 00:41:08,500
+Because everyone who is of the seed of Israel should rejoice and be happy in the joy of the
+
+398
+00:41:08,500 --> 00:41:16,350
+Lord who is pleased and glad to dwell in the lowest fears.
+
+399
+00:41:16,350 --> 00:41:22,480
+I could be so happy because of the happiness that I and we cause.
+
+400
+00:41:22,480 --> 00:41:30,200
+I should rejoice in my maker, A, that he made me be what I do to him.
+
+401
+00:41:30,200 --> 00:41:34,200
+When you prepare your wife a surprise, not your wife, your husband or whatever, the joy
+
+402
+00:41:34,200 --> 00:41:36,680
+that you have is from what?
+
+403
+00:41:36,680 --> 00:41:39,160
+From their happiness.
+
+404
+00:41:39,160 --> 00:41:42,120
+From their happiness, right?
+
+405
+00:41:42,120 --> 00:41:45,600
+So the joy a Jew could derive, what?
+
+406
+00:41:45,600 --> 00:41:47,720
+I'm sorry, I'm scared.
+
+407
+00:41:47,720 --> 00:41:51,640
+I'm saying it's about like what do you mean I don't enjoy the party it's not my friends
+
+408
+00:41:52,520 --> 00:42:05,640
+but I enjoy that he enjoys and by the way you don't you under undervalue the accomplishment
+
+409
+00:42:07,080 --> 00:42:13,320
+of subduing and pushing down and doing it kafia and itabra to the negative forces of the world
+
+410
+00:42:13,320 --> 00:42:20,040
+if a Jew in 2026 is able to withstand a struggle even for an additional minute
+
+411
+00:42:20,040 --> 00:42:25,800
+How much more so if he could channel his desire instead of staying in bed and
+
+412
+00:42:26,680 --> 00:42:33,000
+Coming to class instead of going on a trip to study Torah instead of watching nonsense to watch shi'u
+
+413
+00:42:34,800 --> 00:42:38,110
+That is
+
+414
+00:42:38,110 --> 00:42:43,130
+drawing the master of the world the creator of the world into this realm and saying
+
+415
+00:42:45,030 --> 00:42:47,750
+Is screw you appropriate to say you're not really
+
+416
+00:42:47,750 --> 00:42:52,570
+What's what's like a good curse that you could say that's appropriate to say like
+
+417
+00:42:53,930 --> 00:42:57,070
+Like tell him like you could go to
+
+418
+00:42:59,210 --> 00:43:02,170
+Not shut up. It's almost like saying we are
+
+419
+00:43:02,930 --> 00:43:07,250
+So much stronger and better than all the negative forces in the world
+
+420
+00:43:07,770 --> 00:43:13,080
+It's like by us pushing off an desire even by a minute
+
+421
+00:43:13,960 --> 00:43:18,280
+But even a thought of a speech something we wanted to say and we managed to
+
+422
+00:43:19,900 --> 00:43:25,840
+either push it off or push it down or not say it altogether or how much more so
+
+423
+00:43:25,840 --> 00:43:31,600
+transform it into a positive action that we should do that draws down that
+
+424
+00:43:31,600 --> 00:43:36,400
+created out of this world and brings a tremendous tremendous light to the world
+
+425
+00:43:36,400 --> 00:43:39,520
+and like that's why I wanted to see and finish here so we know we finished this
+
+426
+00:43:39,520 --> 00:43:44,920
+chapter that is why the psalmist psalmist basically King David uses the
+
+427
+00:43:44,920 --> 00:43:51,140
+the plural ossav, them that made him, referring to the corporeal world which is full of kripot
+
+428
+00:43:51,140 --> 00:43:54,980
+and sitra'ah and it's called public domain and mountains of separation and these are
+
+429
+00:43:54,980 --> 00:44:00,780
+transmuted to light and become private domain for the blessed unity by means of this faith.
+
+430
+00:44:00,780 --> 00:44:07,220
+Basically we paraphrase faith as an action when we transform the separated world and
+
+431
+00:44:07,220 --> 00:44:13,460
+all the disconnected areas of the world and created into light and to Hashem's property
+
+432
+00:44:13,460 --> 00:44:19,780
+That is ultimately what brings Hashem so much joy and we should rejoice within that as well.
