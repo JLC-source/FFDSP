@@ -1,81 +1,91 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
-  <!-- "A dwelling place below" — a home whose open door pours light into the darkness -->
+  <!-- "Hashem is One" — a single radiant light filling every world, with joy rising from it -->
   <defs>
     <radialGradient id="tanya-33-glow" cx="50%" cy="50%" r="50%">
       <stop offset="0" stop-color="#f6c96b" stop-opacity="0.6"/>
       <stop offset="0.5" stop-color="#e3a43f" stop-opacity="0.2"/>
       <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="tanya-33-wall" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#c58a3a"/>
-      <stop offset="1" stop-color="#7a4a1c"/>
+    <radialGradient id="tanya-33-sun" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.35" stop-color="#fbe3a0"/>
+      <stop offset="0.8" stop-color="#f0a432"/>
+      <stop offset="1" stop-color="#d9631f"/>
+    </radialGradient>
+    <linearGradient id="tanya-33-ray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f6c96b" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="tanya-33-roof" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e9bf6a"/>
-      <stop offset="1" stop-color="#a96d27"/>
-    </linearGradient>
-    <linearGradient id="tanya-33-door" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#f0a432"/>
-      <stop offset="0.6" stop-color="#fbe3a0"/>
-      <stop offset="1" stop-color="#fff6dc"/>
-    </linearGradient>
-    <linearGradient id="tanya-33-ray" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fbe3a0" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#fbe3a0" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="tanya-33-hill1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2c6597"/>
-      <stop offset="1" stop-color="#0f2744"/>
-    </linearGradient>
-    <linearGradient id="tanya-33-hill2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1f4f7d"/>
-      <stop offset="1" stop-color="#0a1b31"/>
-    </linearGradient>
+    <radialGradient id="tanya-33-orb" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#8fc3e6"/>
+      <stop offset="1" stop-color="#1f4f7d"/>
+    </radialGradient>
   </defs>
 
-  <!-- warm halo -->
-  <circle cx="800" cy="560" r="520" fill="url(#tanya-33-glow)"/>
-  <circle cx="800" cy="560" r="340" fill="none" stroke="#d9b45a" stroke-opacity="0.25" stroke-width="3"/>
-  <circle cx="800" cy="560" r="430" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
+  <circle cx="800" cy="600" r="580" fill="url(#tanya-33-glow)"/>
 
-  <!-- light rays spreading from the door -->
-  <path d="M740 760 L 380 1200 L 620 1200 Z" fill="url(#tanya-33-ray)"/>
-  <path d="M800 760 L 700 1200 L 900 1200 Z" fill="url(#tanya-33-ray)"/>
-  <path d="M860 760 L 980 1200 L 1220 1200 Z" fill="url(#tanya-33-ray)"/>
-  <path d="M720 700 L 160 880 L 160 960 Z" fill="url(#tanya-33-ray)" opacity="0.6"/>
-  <path d="M880 700 L 1440 880 L 1440 960 Z" fill="url(#tanya-33-ray)" opacity="0.6"/>
+  <!-- rings: the worlds, upper and lower, all filled with the One -->
+  <circle cx="800" cy="600" r="250" fill="none" stroke="#d9b45a" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="800" cy="600" r="340" fill="none" stroke="#d9b45a" stroke-opacity="0.32" stroke-width="3"/>
+  <circle cx="800" cy="600" r="430" fill="none" stroke="#d9b45a" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="800" cy="600" r="520" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
 
-  <!-- stars -->
-  <g fill="#fbe3a0">
-    <circle cx="260" cy="180" r="5" opacity="0.8"/>
-    <circle cx="430" cy="290" r="3" opacity="0.6"/>
-    <circle cx="1180" cy="200" r="5" opacity="0.8"/>
-    <circle cx="1350" cy="330" r="3" opacity="0.6"/>
-    <circle cx="640" cy="130" r="3" opacity="0.6"/>
-    <circle cx="980" cy="110" r="4" opacity="0.7"/>
+  <!-- rays -->
+  <g transform="translate(800 600)">
+    <g id="tanya-33-rays" fill="url(#tanya-33-ray)">
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(30)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(60)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(90)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(120)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(150)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(180)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(210)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(240)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(270)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(300)"/>
+      <path d="M150 -14 L560 -3 L560 3 L150 14 Z" transform="rotate(330)"/>
+    </g>
   </g>
 
-  <!-- the house -->
-  <path d="M570 560 L 800 340 L 1030 560 Z" fill="url(#tanya-33-roof)"/>
-  <path d="M570 560 L 1030 560" stroke="#6b3f17" stroke-width="6"/>
-  <rect x="610" y="560" width="380" height="270" fill="url(#tanya-33-wall)"/>
-  <rect x="610" y="560" width="380" height="270" fill="none" stroke="#f0c871" stroke-opacity="0.5" stroke-width="3"/>
+  <!-- the central light -->
+  <circle cx="800" cy="600" r="150" fill="url(#tanya-33-sun)"/>
+  <circle cx="800" cy="600" r="150" fill="none" stroke="#fbe3a0" stroke-width="4" stroke-opacity="0.8"/>
+  <circle cx="800" cy="600" r="185" fill="none" stroke="#f6c96b" stroke-width="2" stroke-opacity="0.5"/>
 
-  <!-- glowing door -->
-  <path d="M740 830 L 740 680 C 740 630, 860 630, 860 680 L 860 830 Z" fill="url(#tanya-33-door)"/>
-  <path d="M740 830 L 740 680 C 740 630, 860 630, 860 680 L 860 830 Z" fill="none" stroke="#fff0c2" stroke-width="4"/>
+  <!-- souls: small blue orbs on the rings, each lit by the same center -->
+  <g stroke="#f6c96b" stroke-opacity="0.35" stroke-width="2">
+    <line x1="800" y1="600" x2="800" y2="260"/>
+    <line x1="800" y1="600" x2="1094" y2="430"/>
+    <line x1="800" y1="600" x2="1094" y2="770"/>
+    <line x1="800" y1="600" x2="800" y2="940"/>
+    <line x1="800" y1="600" x2="506" y2="770"/>
+    <line x1="800" y1="600" x2="506" y2="430"/>
+  </g>
+  <g fill="url(#tanya-33-orb)" stroke="#f6c96b" stroke-width="3">
+    <circle cx="800" cy="260" r="34"/>
+    <circle cx="1094" cy="430" r="34"/>
+    <circle cx="1094" cy="770" r="34"/>
+    <circle cx="800" cy="940" r="34"/>
+    <circle cx="506" cy="770" r="34"/>
+    <circle cx="506" cy="430" r="34"/>
+  </g>
+  <g fill="#fff3cf" fill-opacity="0.85">
+    <circle cx="790" cy="250" r="9"/>
+    <circle cx="1084" cy="420" r="9"/>
+    <circle cx="1084" cy="760" r="9"/>
+    <circle cx="790" cy="930" r="9"/>
+    <circle cx="496" cy="760" r="9"/>
+    <circle cx="496" cy="420" r="9"/>
+  </g>
 
-  <!-- glowing windows -->
-  <rect x="650" y="620" width="56" height="70" rx="26" fill="#fbe3a0"/>
-  <rect x="894" y="620" width="56" height="70" rx="26" fill="#fbe3a0"/>
-
-  <!-- little flame above the roof -->
-  <path d="M800 210 C 830 260, 850 285, 845 315 C 842 340, 820 352, 800 352 C 780 352, 758 340, 755 315 C 752 290, 775 265, 784 245 C 790 262, 796 270, 804 274 C 800 255, 792 235, 800 210 Z" fill="#f0a432"/>
-  <path d="M800 270 C 818 300, 830 312, 827 328 C 825 340, 812 346, 800 346 C 788 346, 775 340, 773 328 C 771 314, 788 298, 800 270 Z" fill="#fff3cf"/>
-
-  <!-- dark hills in the foreground -->
-  <path d="M0 830 C 160 780, 300 790, 440 840 C 540 876, 600 850, 640 830 L 640 1200 L 0 1200 Z" fill="url(#tanya-33-hill1)"/>
-  <path d="M1600 830 C 1440 780, 1300 790, 1160 840 C 1060 876, 1000 850, 960 830 L 960 1200 L 1600 1200 Z" fill="url(#tanya-33-hill1)"/>
-  <path d="M0 960 C 200 910, 340 960, 520 1000 C 640 1026, 720 990, 800 990 C 880 990, 960 1026, 1080 1000 C 1260 960, 1400 910, 1600 960 L 1600 1200 L 0 1200 Z" fill="url(#tanya-33-hill2)" opacity="0.92"/>
-  <path d="M0 960 C 200 910, 340 960, 520 1000 C 640 1026, 720 990, 800 990 C 880 990, 960 1026, 1080 1000 C 1260 960, 1400 910, 1600 960" fill="none" stroke="#f0c871" stroke-opacity="0.35" stroke-width="3"/>
+  <!-- rising sparks of joy -->
+  <g fill="#fbe3a0">
+    <circle cx="620" cy="150" r="6" fill-opacity="0.8"/>
+    <circle cx="980" cy="120" r="5" fill-opacity="0.7"/>
+    <circle cx="1220" cy="260" r="4" fill-opacity="0.6"/>
+    <circle cx="380" cy="280" r="5" fill-opacity="0.6"/>
+    <circle cx="1260" cy="940" r="5" fill-opacity="0.5"/>
+    <circle cx="330" cy="950" r="4" fill-opacity="0.5"/>
+  </g>
 </svg>
