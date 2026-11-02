@@ -112,6 +112,11 @@ def finalize(work):
     make_art.episode_art(ep_path)
 
     mins = stats["duration_seconds"] // 60
+    dup_file = work / "duplicate.json"
+    dup = json.loads(dup_file.read_text()) if dup_file.exists() else None
+    warning = (f"> [!WARNING]\n> **This looks like a duplicate** of `{dup['of']}` "
+               f"({dup['score']:.0%} of the transcript matches). If it is, tap **Close pull request**.\n\n"
+               if dup else "")
     notes = f"\n> **Notes from Claude:** {plan['notes']}\n" if plan["notes"] else ""
     site = cfg["site_url"].rstrip("/")
     rel = SHOW_DIR.relative_to(ROOT).as_posix()
@@ -120,7 +125,7 @@ def finalize(work):
     branch = f"episode/{src['id']}"
     art = (f"\n<img src=\"https://raw.githubusercontent.com/{repo.split('github.com/')[1]}/{branch}/{rel}site/episode-art/{plan['slug']}.jpg\" width=\"360\" alt=\"Episode artwork\">\n"
            if plan.get("series") else "")
-    body = f"""## 🎧 New {cfg['show']['title']} episode ready for your approval
+    body = f"""{warning}## 🎧 New {cfg['show']['title']} episode ready for your approval
 
 **{plan['title']}**
 {art}
@@ -144,6 +149,7 @@ def finalize(work):
   move the original recording from Drive “{cfg['drive']['done']}” back to “{cfg['drive']['inbox']}”.
 """
     (work / "pr_body.md").write_text(body)
+    (work / "pr_title.txt").write_text(("⚠️ Duplicate? " if dup else "🎧 ") + plan["title"])
     print(body)
 
 

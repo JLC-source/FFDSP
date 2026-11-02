@@ -101,9 +101,13 @@ jobs:
         run: python scripts/transcribe.py "$WORK/episode.mp3" "$WORK/transcript"
 
       - name: Gather style examples
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          python scripts/pending.py "$WORK"      # classes still waiting for approval count too
+          python scripts/duplicates.py "$WORK"
           python scripts/style_examples.py > "$WORK/style.md"
-          python scripts/series_list.py > "$WORK/series.md"
+          python scripts/series_list.py "$WORK/pending/episodes" > "$WORK/series.md"
           python -c 'import json,os; print("Original file name:", json.load(open(os.environ["WORK"]+"/source.json"))["name"])' > "$WORK/filename.txt"
 
       - name: Prepare Claude token
@@ -152,17 +156,17 @@ jobs:
         run: |
           python scripts/make_episode.py finalize "$WORK"
           BRANCH="episode/$FILE_ID"
-          TITLE="$(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["title"])')"
+          TITLE="$(cat "$WORK/pr_title.txt")"
           git config user.name "Food for the Soul pipeline"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
           git add episodes transcripts site shows
-          git commit -m "New episode: $TITLE"
+          git commit -m "New episode: $(python -c 'import json,os; print(json.load(open(os.environ["WORK"]+"/plan.json"))["title"])')"
           git push --force origin "$BRANCH"
           if gh pr view "$BRANCH" --json state -q .state 2>/dev/null | grep -q OPEN; then
-            gh pr edit "$BRANCH" --title "🎧 $TITLE" --body-file "$WORK/pr_body.md"
+            gh pr edit "$BRANCH" --title "$TITLE" --body-file "$WORK/pr_body.md"
           else
-            gh pr create --head "$BRANCH" --base main --title "🎧 $TITLE" --body-file "$WORK/pr_body.md" \
+            gh pr create --head "$BRANCH" --base main --title "$TITLE" --body-file "$WORK/pr_body.md" \
               --assignee "$OWNER" --reviewer "$OWNER"   # assigning you is what sends the notification
           fi
 
