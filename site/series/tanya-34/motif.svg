@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- The Holy Ark and its two cherubim: the place where the Shechina rests -->
+  <defs>
+    <radialGradient id="tanya-34-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fbe3a0" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#e3a43f" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tanya-34-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbe3a0"/>
+      <stop offset="0.5" stop-color="#e3b04b"/>
+      <stop offset="1" stop-color="#a8741f"/>
+    </linearGradient>
+    <linearGradient id="tanya-34-wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0c4"/>
+      <stop offset="1" stop-color="#c8923a"/>
+    </linearGradient>
+    <linearGradient id="tanya-34-ray" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#fbe3a0" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#fbe3a0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tanya-34-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7fb3"/>
+      <stop offset="1" stop-color="#16365c"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="800" cy="500" r="520" fill="url(#tanya-34-glow)"/>
+  <circle cx="800" cy="500" r="330" fill="none" stroke="#d9b45a" stroke-opacity="0.25" stroke-width="3"/>
+  <circle cx="800" cy="500" r="420" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- rays of light rising between the cherubim -->
+  <g fill="url(#tanya-34-ray)">
+    <path d="M800 640 L 640 60 L 700 60 Z"/>
+    <path d="M800 640 L 740 40 L 800 40 Z"/>
+    <path d="M800 640 L 800 20 L 860 40 Z"/>
+    <path d="M800 640 L 900 40 L 960 60 Z"/>
+    <path d="M800 640 L 540 140 L 590 120 Z" opacity="0.6"/>
+    <path d="M800 640 L 1010 120 L 1060 140 Z" opacity="0.6"/>
+  </g>
+
+  <!-- left cherub wing -->
+  <path d="M610 600 C 520 560, 470 470, 490 340 C 540 380, 580 400, 600 440
+           C 600 400, 610 360, 640 320 C 660 400, 680 470, 700 540 Z" fill="url(#tanya-34-wing)"/>
+  <path d="M620 590 C 560 540, 535 470, 540 410 C 570 440, 600 470, 640 520 Z" fill="#fff0c4" opacity="0.5"/>
+  <!-- right cherub wing -->
+  <path d="M990 600 C 1080 560, 1130 470, 1110 340 C 1060 380, 1020 400, 1000 440
+           C 1000 400, 990 360, 960 320 C 940 400, 920 470, 900 540 Z" fill="url(#tanya-34-wing)"/>
+  <path d="M980 590 C 1040 540, 1065 470, 1060 410 C 1030 440, 1000 470, 960 520 Z" fill="#fff0c4" opacity="0.5"/>
+  <!-- cherub bodies, leaning toward each other -->
+  <path d="M690 630 C 690 570, 705 540, 725 530 L 760 600 L 760 640 Z" fill="url(#tanya-34-gold)"/>
+  <path d="M910 630 C 910 570, 895 540, 875 530 L 840 600 L 840 640 Z" fill="url(#tanya-34-gold)"/>
+
+  <!-- the ark lid -->
+  <rect x="520" y="630" width="560" height="34" rx="8" fill="url(#tanya-34-gold)"/>
+  <rect x="520" y="630" width="560" height="8" rx="4" fill="#fff0c4" opacity="0.6"/>
+
+  <!-- the ark -->
+  <rect x="540" y="664" width="520" height="270" rx="12" fill="url(#tanya-34-gold)"/>
+  <rect x="570" y="694" width="460" height="210" rx="8" fill="none" stroke="#fff0c4" stroke-opacity="0.55" stroke-width="4"/>
+  <rect x="600" y="722" width="400" height="154" rx="6" fill="none" stroke="#7a5115" stroke-opacity="0.45" stroke-width="3"/>
+  <path d="M800 740 L 850 800 L 800 860 L 750 800 Z" fill="#fff0c4" opacity="0.55"/>
+  <path d="M800 765 L 828 800 L 800 835 L 772 800 Z" fill="#a8741f" opacity="0.5"/>
+
+  <!-- carrying pole and rings -->
+  <rect x="440" y="850" width="720" height="16" rx="8" fill="url(#tanya-34-gold)"/>
+  <circle cx="560" cy="858" r="20" fill="none" stroke="#fbe3a0" stroke-width="8"/>
+  <circle cx="1040" cy="858" r="20" fill="none" stroke="#fbe3a0" stroke-width="8"/>
+
+  <!-- blue shimmering floor -->
+  <path d="M300 1010 C 460 960, 620 1030, 800 990 C 980 950, 1140 1030, 1300 1010 L 1300 1080 L 300 1080 Z" fill="url(#tanya-34-blue)" opacity="0.7"/>
+  <path d="M380 1040 C 520 1005, 660 1060, 800 1030 C 940 1000, 1080 1060, 1220 1040" fill="none" stroke="#9cc4e4" stroke-opacity="0.5" stroke-width="3"/>
+
+  <!-- small stars of light -->
+  <g fill="#fbe3a0">
+    <circle cx="330" cy="260" r="5" opacity="0.7"/>
+    <circle cx="1280" cy="230" r="6" opacity="0.7"/>
+    <circle cx="260" cy="560" r="4" opacity="0.5"/>
+    <circle cx="1360" cy="540" r="4" opacity="0.5"/>
+    <circle cx="420" cy="140" r="3" opacity="0.6"/>
+    <circle cx="1190" cy="110" r="3" opacity="0.6"/>
+  </g>
+</svg>
