@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- Thirteen rays of light unfolding from an open Torah scroll -->
+  <defs>
+    <radialGradient id="tm-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#e0a458" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#e0a458" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tm-ray" x1="0" y1="0" x2="0" y2="-1" gradientUnits="userSpaceOnUse" gradientTransform="scale(1 620)">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#f6c96b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tm-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e8c0"/>
+      <stop offset="1" stop-color="#d9b97a"/>
+    </linearGradient>
+    <linearGradient id="tm-wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9c6a2a"/>
+      <stop offset="0.5" stop-color="#e3b560"/>
+      <stop offset="1" stop-color="#8a5a22"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="800" cy="700" r="560" fill="url(#tm-glow)"/>
+
+  <!-- thirteen rays -->
+  <g transform="translate(800 700)" fill="url(#tm-ray)">
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(-78)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(-65)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(-52)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(-39)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(-26)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(-13)"/>
+    <path d="M-18 0 L0 -620 L18 0 Z"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(13)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(26)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(39)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(52)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(65)"/>
+    <path d="M-14 0 L0 -620 L14 0 Z" transform="rotate(78)"/>
+  </g>
+
+  <!-- open scroll -->
+  <rect x="380" y="640" width="840" height="300" rx="14" fill="url(#tm-parch)"/>
+  <g stroke="#a47a36" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round">
+    <path d="M470 700 H740 M860 700 H1130"/>
+    <path d="M470 750 H740 M860 750 H1130"/>
+    <path d="M470 800 H740 M860 800 H1130"/>
+    <path d="M470 850 H740 M860 850 H1130"/>
+  </g>
+  <path d="M800 640 V940" stroke="#a47a36" stroke-opacity="0.5" stroke-width="3"/>
+
+  <!-- wooden rollers -->
+  <rect x="340" y="610" width="80" height="360" rx="40" fill="url(#tm-wood)"/>
+  <rect x="1180" y="610" width="80" height="360" rx="40" fill="url(#tm-wood)"/>
+  <circle cx="380" cy="590" r="30" fill="#e3b560"/>
+  <circle cx="1220" cy="590" r="30" fill="#e3b560"/>
+  <circle cx="380" cy="990" r="30" fill="#e3b560"/>
+  <circle cx="1220" cy="990" r="30" fill="#e3b560"/>
+</svg>
