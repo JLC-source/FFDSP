@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200">
+  <!-- Kislev: a light kindled in the long winter night -->
+  <defs>
+    <radialGradient id="kislev-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f6c96b" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#e3a43f" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#e3a43f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="kislev-flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#d9631f"/>
+      <stop offset="0.5" stop-color="#f0a432"/>
+      <stop offset="1" stop-color="#fbe3a0"/>
+    </linearGradient>
+    <linearGradient id="kislev-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d78a"/>
+      <stop offset="1" stop-color="#b8862b"/>
+    </linearGradient>
+    <linearGradient id="kislev-night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7fb3" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#16365c" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="800" cy="520" r="520" fill="url(#kislev-glow)"/>
+  <circle cx="800" cy="520" r="340" fill="none" stroke="#d9b45a" stroke-opacity="0.25" stroke-width="3"/>
+  <circle cx="800" cy="520" r="430" fill="none" stroke="#d9b45a" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- crescent of the night -->
+  <path d="M1220 150 C1120 170 1070 260 1100 350 C1130 440 1230 470 1310 430 C1200 440 1150 340 1180 260 C1195 215 1210 180 1220 150 Z" fill="url(#kislev-night)" stroke="#7fb0d8" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- stars -->
+  <g fill="#f6dfa0" opacity="0.8">
+    <circle cx="260" cy="200" r="5"/><circle cx="380" cy="330" r="3"/><circle cx="170" cy="420" r="4"/>
+    <circle cx="1330" cy="620" r="4"/><circle cx="1430" cy="300" r="3"/><circle cx="1000" cy="130" r="3"/>
+    <circle cx="560" cy="120" r="4"/><circle cx="1450" cy="480" r="5"/>
+  </g>
+
+  <!-- menorah arms -->
+  <g fill="none" stroke="url(#kislev-gold)" stroke-width="16" stroke-linecap="round">
+    <path d="M800 640 L800 900"/>
+    <path d="M800 800 C 640 800, 600 740, 600 650"/>
+    <path d="M800 800 C 960 800, 1000 740, 1000 650"/>
+    <path d="M800 840 C 560 850, 450 800, 450 660"/>
+    <path d="M800 840 C 1040 850, 1150 800, 1150 660"/>
+  </g>
+  <!-- base -->
+  <path d="M650 1030 C 700 960, 760 950, 800 900 C 840 950, 900 960, 950 1030 Z" fill="url(#kislev-gold)"/>
+  <rect x="620" y="1030" width="360" height="30" rx="10" fill="url(#kislev-gold)"/>
+
+  <!-- cups -->
+  <g fill="url(#kislev-gold)">
+    <rect x="780" y="620" width="40" height="30" rx="6"/>
+    <rect x="580" y="630" width="40" height="30" rx="6"/>
+    <rect x="980" y="630" width="40" height="30" rx="6"/>
+    <rect x="430" y="640" width="40" height="30" rx="6"/>
+    <rect x="1130" y="640" width="40" height="30" rx="6"/>
+  </g>
+
+  <!-- flames -->
+  <g fill="url(#kislev-flame)">
+    <path d="M800 480 C 830 540, 840 580, 800 620 C 760 580, 770 540, 800 480 Z"/>
+    <path d="M600 490 C 630 550, 640 590, 600 630 C 560 590, 570 550, 600 490 Z"/>
+    <path d="M1000 490 C 1030 550, 1040 590, 1000 630 C 960 590, 970 550, 1000 490 Z"/>
+    <path d="M450 500 C 480 560, 490 600, 450 640 C 410 600, 420 560, 450 500 Z"/>
+    <path d="M1150 500 C 1180 560, 1190 600, 1150 640 C 1110 600, 1120 560, 1150 500 Z"/>
+  </g>
+</svg>
